@@ -86,6 +86,7 @@ CREATE TABLE FARMACIA(
     P_IVA           CHAR(11)        NOT NULL,
     ORARI_APERTURA  DATETIME        NOT NULL,
     NOME            VARCHAR(100)    NOT NULL,
+    TELEFONO    	VARCHAR(15),
     VIA         	VARCHAR(30)     NOT NULL,
     CIVICO      	VARCHAR(4)      NOT NULL,
     CAP         	VARCHAR(5)      NOT NULL,
