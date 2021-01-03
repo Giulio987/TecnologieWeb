@@ -30,7 +30,7 @@ CREATE TABLE PAZIENTE(
     C_F_MEDICO		CHAR(16),
     TELEFONO    	VARCHAR(15),
     VIA         	VARCHAR(50),
-    CIVICO      	VARCHAR(4),
+    CIVICO      	VARCHAR(8),
     CAP         	VARCHAR(8),
     CITTA       	VARCHAR(10),
     PRIMARY KEY(C_F_PAZIENTE),
