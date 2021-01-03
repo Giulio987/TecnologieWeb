@@ -1,21 +1,21 @@
-﻿cognome;nome;sesso;data_nascita;cod_fiscale;indirizzo;telefono;email;citta
-Boncio;Costantino;M;06/10/1908;BNCCTN08R06B859V;Via L.Milani, 98;0532380540;costantino.boncio@aruba.it;Ferrara
-Gaiga;Rossana;F;10/10/1928;GGARSN28R50A149M;Via Liscate, 70;0532484952;rossana.gaiga@tin.it;Ferrara
-Go;Raffaella;F;10/08/2014;GOXRFL14M50C215O;Via S.Marco di Lipari, 200;0532741305;raffaella.go@gmail.com;Ferrara
-Giardinello;Aurora;F;14/07/1901;GRDRRA01L54I535R;Via A.Oroboni, 101/a;0532679169;aurora.giardinello@katamail.it;Ferrara
-Colucci;Gianmarco;M;15/08/2011;CLCGMR11M15E672W;Via Monte Amiata, 152;0532651576;gian.colu@teletu.it;Ferrara
-China;Elide;F;12/06/1902;CHNLDE02H52B429N;Corso Fiume, 294;051879211;elid.chin@tin.it;Bologna
-Chiellini;Ludovica;F;07/08/1992;CHLLVC92M47C950A;Via E.Duse, 12;051177904;ludovica.chiellini@gmail.com;Bologna
-Benoni;Marina;F;29/08/1958;BNNMRN58M69D216A;Largo C.Ugoni, 156;0532867183;marina.benoni@yahoo.it;Ferrara
-Claveri;Iside;F;21/09/1928;CLVSDI28P61D491Y;Via D.Compagni, 83;051634292;iside.claveri@aruba.it;Bologna
-Perosi;Ennio;M;08/07/1922;PRSNNE22L08L439N;Via Apollodoro, 200/g;051725996;eperosi@teletu.it;Bologna
-Persichetti;Torquato;M;22/04/1983;PRSTQT83D22C338N;Via Santuario del Sacro Cuore di Gesù, 22;051955064;torquato.persichetti@yahoo.com;Bologna
-Vigne;Agata;F;25/09/2011;VGNGTA11P65A566J;Cavalcavia Vivaio, 84/h;0532432010;agat.vign@libero.it;Ferrara
-Mattera;Goffredo;M;11/08/1930;MTTGFR30M11F316L;Via C.Rotolo, 184;0532300320;goffredo.mattera@tin.it;Ferrara
-Cremonin;Ersilia;F;14/01/1934;CRMRSL34A54F009D;Via M.Ragusa, 246/e;051990097;ersilia.cremonin@tiscali.it;Bologna
-Viscontini;Ernesto;M;18/11/1981;VSCRST81S18A371R;Via G.Rotondi, 294/i;051139138;ernesto.viscontini@gmail.com;Bologna
-Pagliaccio;Amone;M;10/03/1968;PGLMNA68C10G629P;Via Monte Lungo, 291;051555242;amone.pagliaccio@tiscali.it;Bologna
-Cagnazzi;Lapo;M;29/06/2009;CGNLPA09H29D675D;Via Cassolo, 17;051144324;lapo.cagnazzi@tin.it;Bologna
-Belvedere;Gaspare;M;10/06/1976;BLVGPR76H10A409P;Via Giovanni da Procida, 139;0532441344;gaspare.belvedere@katamail.it;Ferrara
-Briscioli;Agata;F;15/08/1909;BRSGTA09M55D395X;Via C.Abba, 63;0532745114;a.briscioli@gmail.com;Ferrara
-Panariello;Adolfo;M;07/03/1945;PNRDLF45C07H350O;Via S.Colombano, 240/i;051817255;a.panariello@aruba.it;Bologna
+cognome	nome	sesso	data_nascita	cod_fiscale	indirizzo	telefono	email	citta
+Boncio	Costantino	M	06/10/08	BNCCTN08R06B859V	Via L.Milani, 98	0532380540	costantino.boncio@aruba.it	Ferrara
+Gaiga	Rossana	F	10/10/28	GGARSN28R50A149M	Via Liscate, 70	0532484952	rossana.gaiga@tin.it	Ferrara
+Go	Raffaella	F	10/08/14	GOXRFL14M50C215O	Via S.Marco di Lipari, 200	0532741305	raffaella.go@gmail.com	Ferrara
+Giardinello	Aurora	F	14/07/01	GRDRRA01L54I535R	Via A.Oroboni, 101/a	0532679169	aurora.giardinello@katamail.it	Ferrara
+Colucci	Gianmarco	M	15/08/11	CLCGMR11M15E672W	Via Monte Amiata, 152	0532651576	gian.colu@teletu.it	Ferrara
+China	Elide	F	12/06/02	CHNLDE02H52B429N	Corso Fiume, 294	051879211	elid.chin@tin.it	Bologna
+Chiellini	Ludovica	F	07/08/92	CHLLVC92M47C950A	Via E.Duse, 12	051177904	ludovica.chiellini@gmail.com	Bologna
+Benoni	Marina	F	29/08/58	BNNMRN58M69D216A	Largo C.Ugoni, 156	0532867183	marina.benoni@yahoo.it	Ferrara
+Claveri	Iside	F	21/09/28	CLVSDI28P61D491Y	Via D.Compagni, 83	051634292	iside.claveri@aruba.it	Bologna
+Perosi	Ennio	M	08/07/22	PRSNNE22L08L439N	Via Apollodoro, 200/g	051725996	eperosi@teletu.it	Bologna
+Persichetti	Torquato	M	22/04/83	PRSTQT83D22C338N	Via Santuario del Sacro Cuore di Gesù, 22	051955064	torquato.persichetti@yahoo.com	Bologna
+Vigne	Agata	F	25/09/11	VGNGTA11P65A566J	Cavalcavia Vivaio, 84/h	0532432010	agat.vign@libero.it	Ferrara
+Mattera	Goffredo	M	11/08/30	MTTGFR30M11F316L	Via C.Rotolo, 184	0532300320	goffredo.mattera@tin.it	Ferrara
+Cremonin	Ersilia	F	14/01/34	CRMRSL34A54F009D	Via M.Ragusa, 246/e	051990097	ersilia.cremonin@tiscali.it	Bologna
+Viscontini	Ernesto	M	18/11/81	VSCRST81S18A371R	Via G.Rotondi, 294/i	051139138	ernesto.viscontini@gmail.com	Bologna
+Pagliaccio	Amone	M	10/03/68	PGLMNA68C10G629P	Via Monte Lungo, 291	051555242	amone.pagliaccio@tiscali.it	Bologna
+Cagnazzi	Lapo	M	29/06/09	CGNLPA09H29D675D	Via Cassolo, 17	051144324	lapo.cagnazzi@tin.it	Bologna
+Belvedere	Gaspare	M	10/06/76	BLVGPR76H10A409P	Via Giovanni da Procida, 139	0532441344	gaspare.belvedere@katamail.it	Ferrara
+Briscioli	Agata	F	15/08/09	BRSGTA09M55D395X	Via C.Abba, 63	0532745114	a.briscioli@gmail.com	Ferrara
+Panariello	Adolfo	M	07/03/45	PNRDLF45C07H350O	Via S.Colombano, 240/i	051817255	a.panariello@aruba.it	Bologna
