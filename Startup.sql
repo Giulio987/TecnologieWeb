@@ -61,8 +61,7 @@ CREATE TABLE PRODOTTO(
     PREZZO			FLOAT	    	NOT NULL,
     DITTA           VARCHAR(100)    NOT NULL,
     PESO	FLOAT NOT NULL,
-    PRIMARY KEY(AIC),
-    UNIQUE(NOME)
+    PRIMARY KEY(AIC)
 );
 #NRE
 #https://sistemats1.sanita.finanze.it/portale/documents/20182/33285/gestione%2BNRE_24_05_2012.pdf/42dadb9f-9c5a-aec0-c5de-a379c41d086e
