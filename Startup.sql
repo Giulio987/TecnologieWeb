@@ -11,14 +11,13 @@ CREATE TABLE MEDICO(
     SESSO			CHAR(1),
     DOB             DATE,
     TELEFONO    	VARCHAR(15),
-    VIA         	VARCHAR(50),
+    VIA_MEDICO      VARCHAR(50),
     CIVICO      	VARCHAR(8),
     CAP         	VARCHAR(5),
     CITTA       	VARCHAR(10),
     PRIMARY KEY(C_F_MEDICO),
     UNIQUE(EMAIL)
 );
-
 
 CREATE TABLE PAZIENTE(
     C_F_PAZIENTE    CHAR(16)        NOT NULL,
