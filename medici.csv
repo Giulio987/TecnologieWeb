@@ -1,21 +1,21 @@
 cognome,nome,sesso,data_nascita,cod_fiscale,via,civico,cap,telefono,email,citta
-China,Elide,F,1980-12-21,CHNLDE02H52B429N,Corso Fiume,294,40121,051879211,elid.chin@tin.it,Bologna
+China,Elide,F,1980-12-21,CHNLDE02H52B429N,Via E.Duse,12,40121,051879211,elid.chin@tin.it,Bologna
 Chiellini,Ludovica,F,1963-08-27,CHLLVC92M47C950A,Via E.Duse,12,40121,051177904,ludovica.chiellini@gmail.com,Bologna
-Claveri,Iside,F,1933-07-21,CLVSDI28P61D491Y,Via D.Compagni,83,40121,051634292,iside.claveri@aruba.it,Bologna
-Perosi,Ennio,M,1989-10-06,PRSNNE22L08L439N,Via Apollodoro,200/g,40121,051725996,eperosi@teletu.it,Bologna
-Persichetti,Torquato,M,1985-03-25,PRSTQT83D22C338N,Via Santuario del Sacro Cuore di Gesù,22,40121,051955064,torquato.persichetti@yahoo.com,Bologna
+Claveri,Iside,F,1933-07-21,CLVSDI28P61D491Y,Via E.Duse,12,40121,051634292,iside.claveri@aruba.it,Bologna
+Perosi,Ennio,M,1989-10-06,PRSNNE22L08L439N,Via E.Duse,12,40121,051725996,eperosi@teletu.it,Bologna
+Persichetti,Torquato,M,1985-03-25,PRSTQT83D22C338N,Via E.Duse,12,40121,051955064,torquato.persichetti@yahoo.com,Bologna
 Cremonin,Ersilia,F,1980-07-04,CRMRSL34A54F009D,Via M.Ragusa,246/e,40121,051990097,ersilia.cremonin@tiscali.it,Bologna
-Viscontini,Ernesto,M,1974-10-10,VSCRST81S18A371R,Via G.Rotondi,294/i,40121,051139138,ernesto.viscontini@gmail.com,Bologna
-Pagliaccio,Amone,M,1973-10-17,PGLMNA68C10G629P,Via Monte Lungo,291,40121,051555242,amone.pagliaccio@tiscali.it,Bologna
-Cagnazzi,Lapo,M,1936-06-02,CGNLPA09H29D675D,Via Cassolo,17,40121,051144324,lapo.cagnazzi@tin.it,Bologna
-Panariello,Adolfo,M,1981-03-13,PNRDLF45C07H350O,Via S.Colombano,240/i,40121,051817255,a.panariello@aruba.it,Bologna
+Viscontini,Ernesto,M,1974-10-10,VSCRST81S18A371R,Via M.Ragusa,246/e,40121,051139138,ernesto.viscontini@gmail.com,Bologna
+Pagliaccio,Amone,M,1973-10-17,PGLMNA68C10G629P,Via M.Ragusa,246/e,40121,051555242,amone.pagliaccio@tiscali.it,Bologna
+Cagnazzi,Lapo,M,1936-06-02,CGNLPA09H29D675D,Via M.Ragusa,246/e,40121,051144324,lapo.cagnazzi@tin.it,Bologna
+Panariello,Adolfo,M,1981-03-13,PNRDLF45C07H350O,Via M.Ragusa,246/e,40121,051817255,a.panariello@aruba.it,Bologna
 Boncio,Costantino,M,1964-07-19,BNCCTN08R06B859V,Via L.Milani,98,44100,0532380540,costantino.boncio@aruba.it,Ferrara
-Gaiga,Rossana,F,1934-03-09,GGARSN28R50A149M,Via Liscate,70,44100,0532484952,rossana.gaiga@tin.it,Ferrara
-Go,Raffaella,F,1942-04-04,GOXRFL14M50C215O,Via S.Marco di Lipari,200,44100,0532741305,raffaella.go@gmail.com,Ferrara
-Giardinello,Aurora,F,1978-08-19,GRDRRA01L54I535R,Via A.Oroboni,101/a,44100,0532679169,aurora.giardinello@katamail.it,Ferrara
-Colucci,Gianmarco,M,1983-10-31,CLCGMR11M15E672W,Via Monte Amiata,152,44100,0532651576,gian.colu@teletu.it,Ferrara
+Gaiga,Rossana,F,1934-03-09,GGARSN28R50A149M,Via L.Milani,98,44100,0532484952,rossana.gaiga@tin.it,Ferrara
+Go,Raffaella,F,1942-04-04,GOXRFL14M50C215O,Via L.Milani,98,44100,0532741305,raffaella.go@gmail.com,Ferrara
+Giardinello,Aurora,F,1978-08-19,GRDRRA01L54I535R,Via L.Milani,98,44100,0532679169,aurora.giardinello@katamail.it,Ferrara
+Colucci,Gianmarco,M,1983-10-31,CLCGMR11M15E672W,Via L.Milani,98,44100,0532651576,gian.colu@teletu.it,Ferrara
 Benoni,Marina,F,1934-06-12,BNNMRN58M69D216A,Largo C.Ugoni,156,44100,0532867183,marina.benoni@yahoo.it,Ferrara
-Vigne,Agata,F,1931-12-15,VGNGTA11P65A566J,Cavalcavia Vivaio,84/h,44100,0532432010,agat.vign@libero.it,Ferrara
-Mattera,Goffredo,M,1945-12-31,MTTGFR30M11F316L,Via C.Rotolo,184,44100,0532300320,goffredo.mattera@tin.it,Ferrara
-Belvedere,Gaspare,M,1940-12-09,BLVGPR76H10A409P,Via Giovanni da Procida,139,44100,0532441344,gaspare.belvedere@katamail.it,Ferrara
-Briscioli,Agata,F,1936-12-21,BRSGTA09M55D395X,Via C.Abba,63,44100,0532745114,a.briscioli@gmail.com,Ferrara
+Vigne,Agata,F,1931-12-15,VGNGTA11P65A566J,Largo C.Ugoni,156,44100,0532432010,agat.vign@libero.it,Ferrara
+Mattera,Goffredo,M,1945-12-31,MTTGFR30M11F316L,Largo C.Ugoni,156,44100,0532300320,goffredo.mattera@tin.it,Ferrara
+Belvedere,Gaspare,M,1940-12-09,BLVGPR76H10A409P,Largo C.Ugoni,156,44100,0532441344,gaspare.belvedere@katamail.it,Ferrara
+Briscioli,Agata,F,1936-12-21,BRSGTA09M55D395X,Largo C.Ugoni,156,44100,0532745114,a.briscioli@gmail.com,Ferrara
