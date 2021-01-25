@@ -1,79 +1,74 @@
-@extends('layout.base')
+@extends('layouts.app')
 
 @section('content')  
- <!-- Styles OVVIAMENTE DA SPOSTARE -->
- <style>
-    html, body {
-        background-color: #fff;
-        color: #636b6f;
-        font-family: 'Nunito', sans-serif;
-        font-weight: 200;
-        height: 100vh;
-        margin: 0;
-    }
+<!-- Banner -->
+<div id="banner-wrapper">
+					<div id="banner" class="box container">
+						<div class="row">
+							<div class="col-7 col-12-medium">
+								<h2>Hi. This is Verti.</h2>
+								<p>It's a free responsive site template by HTML5 UP</p>
+							</div>
+							<div class="col-5 col-12-medium">
+								<ul>
+									<li><a href="#" class="button large icon solid fa-arrow-circle-right">Ok let's go</a></li>
+									<li><a href="#" class="button alt large icon solid fa-question-circle">More info</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
 
-    .full-height {
-        height: 100vh;
-    }
+			<!-- Features -->
+				<div id="features-wrapper">
+					<div class="container">
+						<div class="row">
+							<div class="col-4 col-12-medium">
 
-    .flex-center {
-        align-items: center;
-        display: flex;
-        justify-content: center;
-    }
+								<!-- Box -->
+									<section class="box feature">
+										<a href="#" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
+										<div class="inner">
+											<header>
+												<h2>Put something here</h2>
+												<p>Maybe here as well I think</p>
+											</header>
+											<p>Phasellus quam turpis, feugiat sit amet in, hendrerit in lectus. Praesent sed semper amet bibendum tristique fringilla.</p>
+										</div>
+									</section>
 
-    .position-ref {
-        position: relative;
-    }
+							</div>
+							<div class="col-4 col-12-medium">
 
-    .top-right {
-        position: absolute;
-        right: 10px;
-        top: 18px;
-    }
+								<!-- Box -->
+									<section class="box feature">
+										<a href="#" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
+										<div class="inner">
+											<header>
+												<h2>An interesting title</h2>
+												<p>This is also an interesting subtitle</p>
+											</header>
+											<p>Phasellus quam turpis, feugiat sit amet in, hendrerit in lectus. Praesent sed semper amet bibendum tristique fringilla.</p>
+										</div>
+									</section>
 
-    .content {
-        text-align: center;
-    }
+							</div>
+							<div class="col-4 col-12-medium">
 
-    .title {
-        font-size: 84px;
-    }
+								<!-- Box -->
+									<section class="box feature">
+										<a href="#" class="image featured"><img src="images/pic03.jpg" alt="" /></a>
+										<div class="inner">
+											<header>
+												<h2>Oh, and finally ...</h2>
+												<p>Here's another intriguing subtitle</p>
+											</header>
+											<p>Phasellus quam turpis, feugiat sit amet in, hendrerit in lectus. Praesent sed semper amet bibendum tristique fringilla.</p>
+										</div>
+									</section>
 
-    .links > a {
-        color: #636b6f;
-        padding: 0 25px;
-        font-size: 13px;
-        font-weight: 600;
-        letter-spacing: .1rem;
-        text-decoration: none;
-        text-transform: uppercase;
-    }
-
-    .m-b-md {
-        margin-bottom: 30px;
-    }
-</style>
-<div class="flex-center position-ref full-height">
-    @if (Route::has('login'))
-        <div class="top-right links">
-            @auth
-                <a href="{{ url('/home') }}">Home</a>
-            @else
-                <a href="{{ route('login') }}">Login</a>
-
-                @if (Route::has('register'))
-                    <a href="{{ route('register') }}">Register</a>
-                @endif
-            @endauth
-        </div>
-    @endif
-
-    <div class="content">
-        <div class="title m-b-md">
-            Blackbeard
-        </div>
-        <p>Benvenuto, se hai un account esegui il login usando il link in alto a destra.</p>
-    </div>
-</div>
+							</div>
+						</div>
+					</div>
+				</div>
 @endsection
