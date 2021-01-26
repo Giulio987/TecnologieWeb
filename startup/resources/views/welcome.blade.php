@@ -6,8 +6,7 @@
 					<div id="banner" class="box container">
 						<div class="row">
 							<div class="col-7 col-12-medium">
-								<h2>Hi. This is Verti.</h2>
-								<p>It's a free responsive site template by HTML5 UP</p>
+							<img class="img-fluid" src="images/pexels-gustavo-fring-3985166.jpg" alt="testo alternativo">
 							</div>
 							<div class="col-5 col-12-medium">
 								<ul>
@@ -27,7 +26,7 @@
 
 								<!-- Box -->
 									<section class="box feature">
-										<a href="#" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
+										<a href="#" class="image featured"><img src="images/pexels-gustavo-fring-3985166.jpg" alt="" /></a>
 										<div class="inner">
 											<header>
 												<h2>Put something here</h2>
@@ -42,7 +41,7 @@
 
 								<!-- Box -->
 									<section class="box feature">
-										<a href="#" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
+										<a href="#" class="image featured"><img src="images/pexels-gustavo-fring-3985166.jpg" alt="" /></a>
 										<div class="inner">
 											<header>
 												<h2>An interesting title</h2>
@@ -57,7 +56,7 @@
 
 								<!-- Box -->
 									<section class="box feature">
-										<a href="#" class="image featured"><img src="images/pic03.jpg" alt="" /></a>
+										<a href="#" class="image featured"><img src="images/pexels-gustavo-fring-3985166.jpg" alt="" /></a>
 										<div class="inner">
 											<header>
 												<h2>Oh, and finally ...</h2>
