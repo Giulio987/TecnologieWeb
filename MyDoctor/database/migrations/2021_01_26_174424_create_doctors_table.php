@@ -14,8 +14,17 @@ class CreateDoctorsTable extends Migration
     public function up()
     {
         Schema::create('doctors', function (Blueprint $table) {
-            $table->id();
+            $table->char('fiscal_code','16')->primary();
+            $table->string('name','20');
+            $table->string('surname','20');
+            $table->string('email','50')->unique();
+            $table->char('gender','1');
+            $table->date('dob');
+            $table->string('phone_number','15')->unique();
+            $table->bigInteger('id_building')->unsigned();
             $table->timestamps();
+
+            $table->foreign('id_building')->references('id')->on('buildings')->onDelete('cascade');
         });
     }
 
