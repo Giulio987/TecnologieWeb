@@ -26,7 +26,9 @@ class CreatePazientsTable extends Migration
             $table->string('city', '30');
             $table->char('fiscal_code_doctor', '16');
             $table->timestamps();
-
+            $table->timestamp('email_verified_at')->nullable();
+            $table->string('password');
+            $table->rememberToken();
             $table->foreign('fiscal_code_doctor')->references('fiscal_code')->on('doctors')->onDelete('cascade');
         });
     }

@@ -1,73 +1,80 @@
 @extends('layouts.app')
 
 @section('content')  
-<!-- Banner -->
-<div id="banner-wrapper">
-					<div id="banner" class="box container">
-						<div class="row">
-							<div class="col-7 col-12-medium">
-							<img class="img-fluid" src="images/pexels-gustavo-fring-3985166.jpg" alt="testo alternativo">
-							</div>
-							<div class="col-5 col-12-medium">
-								<ul>
-									<li><a href="#" class="button large icon solid fa-arrow-circle-right">Ok let's go</a></li>
-									<li><a href="#" class="button alt large icon solid fa-question-circle">More info</a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
+	<!-- Page Content -->
+	<div class="container">
 
-			<!-- Features -->
-				<div id="features-wrapper">
-					<div class="container">
-						<div class="row">
-							<div class="col-4 col-12-medium">
+	<!-- Heading Row -->
+	<div class="row align-items-center my-5">
+		<div class="col-lg-7">
+		<img class="img-fluid rounded mb-4 mb-lg-0" src="http://placehold.it/900x400" alt="">
+		</div>
+		<!-- /.col-lg-8 -->
+		<div class="col-lg-5">
+		<h1 class="font-weight-light">MyDoctor</h1>
+		<p>MyDoctor è una startup innovaticva che ........</p>
+		<a class="btn btn-primary" href="#">Call to Action!</a>
+		</div>
+		<!-- /.col-md-4 -->
+	</div>
+	<!-- /.row -->
 
-								<!-- Box -->
-									<section class="box feature">
-										<a href="#" class="image featured"><img src="images/pexels-gustavo-fring-3985166.jpg" alt="" /></a>
-										<div class="inner">
-											<header>
-												<h2>Put something here</h2>
-												<p>Maybe here as well I think</p>
-											</header>
-											<p>Phasellus quam turpis, feugiat sit amet in, hendrerit in lectus. Praesent sed semper amet bibendum tristique fringilla.</p>
-										</div>
-									</section>
+	<!-- Call to Action Well -->
+	<div class="card text-white bg-secondary my-5 py-4 text-center">
+		<div class="card-body">
+		<p class="text-white m-0">This call to action card is a great place to showcase some important information or display a clever tagline!</p>
+		</div>
+	</div>
 
-							</div>
-							<div class="col-4 col-12-medium">
+	<!-- Content Row -->
+	<div class="row">
+		<div class="col-md-4 mb-5">
+		<div class="card h-100">
+			<div class="card-body">
+			<h2 class="card-title">Card One</h2>
+			<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem magni quas ex numquam, maxime minus quam molestias corporis quod, ea minima accusamus.</p>
+			</div>
+			<div class="card-footer">
+			<a href="#" class="btn btn-primary btn-sm">More Info</a>
+			</div>
+		</div>
+		</div>
+		<!-- /.col-md-4 -->
+		<div class="col-md-4 mb-5">
+		<div class="card h-100">
+			<div class="card-body">
+			<h2 class="card-title">Card Two</h2>
+			<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod tenetur ex natus at dolorem enim! Nesciunt pariatur voluptatem sunt quam eaque, vel, non in id dolore voluptates quos eligendi labore.</p>
+			</div>
+			<div class="card-footer">
+			<a href="#" class="btn btn-primary btn-sm">More Info</a>
+			</div>
+		</div>
+		</div>
+		<!-- /.col-md-4 -->
+		<div class="col-md-4 mb-5">
+		<div class="card h-100">
+			<div class="card-body">
+			<h2 class="card-title">Card Three</h2>
+			<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem magni quas ex numquam, maxime minus quam molestias corporis quod, ea minima accusamus.</p>
+			</div>
+			<div class="card-footer">
+			<a href="#" class="btn btn-primary btn-sm">More Info</a>
+			</div>
+		</div>
+		</div>
+		<!-- /.col-md-4 -->
 
-								<!-- Box -->
-									<section class="box feature">
-										<a href="#" class="image featured"><img src="images/pexels-gustavo-fring-3985166.jpg" alt="" /></a>
-										<div class="inner">
-											<header>
-												<h2>An interesting title</h2>
-												<p>This is also an interesting subtitle</p>
-											</header>
-											<p>Phasellus quam turpis, feugiat sit amet in, hendrerit in lectus. Praesent sed semper amet bibendum tristique fringilla.</p>
-										</div>
-									</section>
+	</div>
+	<!-- /.row -->
 
-							</div>
-							<div class="col-4 col-12-medium">
+	</div>
+	<!-- /.container -->
 
-								<!-- Box -->
-									<section class="box feature">
-										<a href="#" class="image featured"><img src="images/pexels-gustavo-fring-3985166.jpg" alt="" /></a>
-										<div class="inner">
-											<header>
-												<h2>Oh, and finally ...</h2>
-												<p>Here's another intriguing subtitle</p>
-											</header>
-											<p>Phasellus quam turpis, feugiat sit amet in, hendrerit in lectus. Praesent sed semper amet bibendum tristique fringilla.</p>
-										</div>
-									</section>
-
-							</div>
-						</div>
-					</div>
-				</div>
+	<!-- Footer -->
+	<footer class="py-5 bg-dark">
+	<div class="container">
+		<p class="m-0 text-center text-white">Copyright &copy; MyDoctor2021</p>
+	</div>
+	</footer>
 @endsection

@@ -22,6 +22,9 @@ class CreateDoctorsTable extends Migration
             $table->date('dob');
             $table->string('phone_number','15')->unique();
             $table->bigInteger('id_building')->unsigned();
+            $table->timestamp('email_verified_at')->nullable();
+            $table->string('password');
+            $table->rememberToken();
             $table->timestamps();
 
             $table->foreign('id_building')->references('id')->on('buildings')->onDelete('cascade');
