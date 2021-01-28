@@ -16,9 +16,7 @@ class CreateMedicinesTable extends Migration
         Schema::create('medicines', function (Blueprint $table) {
             $table->char('aic', '10')->primary();
             $table->string('name','50');
-            $table->string('pharmaceutical_company','100');
             $table->string('reference_packaging','100');
-            $table->text('description');
             $table->timestamps();
         });
     }
