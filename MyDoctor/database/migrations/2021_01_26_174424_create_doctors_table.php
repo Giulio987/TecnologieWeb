@@ -22,14 +22,10 @@ class CreateDoctorsTable extends Migration
             $table->date('dob');
             $table->string('phone_number','15')->unique();
             $table->bigInteger('id_building')->unsigned();
-<<<<<<< HEAD
+
 
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password'); 
-=======
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
->>>>>>> ac2f6918f421f8bc9cab8fcb414227980e2620b7
             $table->rememberToken();
             $table->timestamps();
 

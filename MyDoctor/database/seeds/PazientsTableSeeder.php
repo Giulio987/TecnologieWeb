@@ -83,11 +83,12 @@ class PazientsTableSeeder extends Seeder
             'email'              => 'alessia.bonforte@gmail.com',
             'dob'                => '1965-02-17',
             'phone_number'       => '0510848582',
+            'gender'             => 'F',
             'street_address'     => 'Via Afrodite',
             'street_number'      => '292',
             'postal_code'        => '40121',
             'city'               => 'Bologna',
-            'fiscal_code_doctor' => '',
+            'fiscal_code_doctor' => 'CHNLDE02H52B429N',
             'password'           => bcrypt('pazient'),
             'updated_at'         => date('Y-m-d h:s:i'),
             'created_at'         => date('Y-m-d h:s:i')
@@ -151,7 +152,7 @@ class PazientsTableSeeder extends Seeder
             'street_number'      => '47/b',
             'postal_code'        => '44100',
             'city'               => 'Ferrara',
-            'fiscal_code_doctor' => 'CHLLVC92M47C950A',
+            'fiscal_code_doctor' => 'BNCCTN08R06B859V',
             'password'           => bcrypt('pazient'),
             'updated_at'         => date('Y-m-d h:s:i'),
             'created_at'         => date('Y-m-d h:s:i')
@@ -167,7 +168,7 @@ class PazientsTableSeeder extends Seeder
             'street_number'      => '225',
             'postal_code'        => '44100',
             'city'               => 'Ferrara',
-            'fiscal_code_doctor' => 'CHLLVC92M47C950A',
+            'fiscal_code_doctor' => 'BNCCTN08R06B859V',
             'password'           => bcrypt('pazient'),
             'updated_at'         => date('Y-m-d h:s:i'),
             'created_at'         => date('Y-m-d h:s:i')

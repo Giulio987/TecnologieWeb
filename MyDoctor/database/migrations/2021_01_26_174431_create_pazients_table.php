@@ -19,7 +19,7 @@ class CreatePazientsTable extends Migration
             $table->string('surname', '20');
             $table->string('email', '50')->unique();
             $table->date('dob');
-            $table->string('phone_number','15')->unique();
+            $table->string('phone_number','15')->unique();         
             $table->char('gender', '1');
             $table->string('street_address', '50');
             $table->string('street_number', '8');
@@ -31,9 +31,7 @@ class CreatePazientsTable extends Migration
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
-            $table->rememberToken();
+            
             $table->foreign('fiscal_code_doctor')->references('fiscal_code')->on('doctors')->onDelete('cascade');
         });
     }

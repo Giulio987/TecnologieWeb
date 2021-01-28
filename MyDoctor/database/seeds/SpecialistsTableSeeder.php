@@ -11,56 +11,106 @@ class SpecialistsTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('buildings')->insert([[
-            'description' => 'Via E.Duse'
+        DB::table('specialists')->insert([[
+            'description' => 'Via E.Duse',
+            'updated_at'    => date('Y-m-d h:s:i'),
+            'created_at'    => date('Y-m-d h:s:i')
         ], [
-            'description' => 'Angiologica'
+            'description' => 'Angiologica',
+            'updated_at'    => date('Y-m-d h:s:i'),
+            'created_at'    => date('Y-m-d h:s:i')
         ], [
-            'description' => 'Allergologica'
+            'description' => 'Allergologica',
+            'updated_at'    => date('Y-m-d h:s:i'),
+            'created_at'    => date('Y-m-d h:s:i')
         ], [
-            'description' => 'Cardiochirurgica'
+            'description' => 'Cardiochirurgica',
+            'updated_at'    => date('Y-m-d h:s:i'),
+            'created_at'    => date('Y-m-d h:s:i')
         ], [
-            'description' => 'Cardiologica'
+            'description' => 'Cardiologica',
+            'updated_at'    => date('Y-m-d h:s:i'),
+            'created_at'    => date('Y-m-d h:s:i')
         ], [
-            'description' => 'Cardiologica con ECG'
+            'description' => 'Cardiologica con ECG',
+            'updated_at'    => date('Y-m-d h:s:i'),
+            'created_at'    => date('Y-m-d h:s:i')
         ], [
-            'description' => 'Chirurgia vascolare'
+            'description' => 'Chirurgia vascolare',
+            'updated_at'    => date('Y-m-d h:s:i'),
+            'created_at'    => date('Y-m-d h:s:i')
         ], [
-            'description' => 'Dermatologica'
+            'description' => 'Dermatologica',
+            'updated_at'    => date('Y-m-d h:s:i'),
+            'created_at'    => date('Y-m-d h:s:i')
         ], [
-            'description' => 'Diabetologica'
+            'description' => 'Diabetologica',
+            'updated_at'    => date('Y-m-d h:s:i'),
+            'created_at'    => date('Y-m-d h:s:i')
         ], [
-            'description' => 'Dietologica'
+            'description' => 'Dietologica',
+            'updated_at'    => date('Y-m-d h:s:i'),
+            'created_at'    => date('Y-m-d h:s:i')
         ], [
-            'description' => 'Epatologica'
+            'description' => 'Epatologica',
+            'updated_at'    => date('Y-m-d h:s:i'),
+            'created_at'    => date('Y-m-d h:s:i')
         ], [
-            'description' => 'Endocrinologica'
+            'description' => 'Endocrinologica',
+            'updated_at'    => date('Y-m-d h:s:i'),
+            'created_at'    => date('Y-m-d h:s:i')
         ], [
-            'description' => 'Ginecologica'
+            'description' => 'Ginecologica',
+            'updated_at'    => date('Y-m-d h:s:i'),
+            'created_at'    => date('Y-m-d h:s:i')
         ], [
-            'description' => 'Gastroenterologica'
+            'description' => 'Gastroenterologica',
+            'updated_at'    => date('Y-m-d h:s:i'),
+            'created_at'    => date('Y-m-d h:s:i')
         ], [
-            'description' => 'InfettivologiaMedico-sportiva'
+            'description' => 'InfettivologiaMedico-sportiva',
+            'updated_at'    => date('Y-m-d h:s:i'),
+            'created_at'    => date('Y-m-d h:s:i')
         ], [
-            'description' => 'Neurologica'
+            'description' => 'Neurologica',
+            'updated_at'    => date('Y-m-d h:s:i'),
+            'created_at'    => date('Y-m-d h:s:i')
         ], [
-            'description' => 'Oculistica'
+            'description' => 'Oculistica',
+            'updated_at'    => date('Y-m-d h:s:i'),
+            'created_at'    => date('Y-m-d h:s:i')
         ], [
-            'description' => 'Odontoiatrica'
+            'description' => 'Odontoiatrica',
+            'updated_at'    => date('Y-m-d h:s:i'),
+            'created_at'    => date('Y-m-d h:s:i')
         ], [
-            'description' => 'Oncologica'
+            'description' => 'Oncologica',
+            'updated_at'    => date('Y-m-d h:s:i'),
+            'created_at'    => date('Y-m-d h:s:i')
         ], [
-            'description' => 'Ortopedica'
+            'description' => 'Ortopedica',
+            'updated_at'    => date('Y-m-d h:s:i'),
+            'created_at'    => date('Y-m-d h:s:i')
         ], [
-            'description' => 'Ostetrica'
+            'description' => 'Ostetrica',
+            'updated_at'    => date('Y-m-d h:s:i'),
+            'created_at'    => date('Y-m-d h:s:i')
         ], [
-            'description' => 'Pneumologica'
+            'description' => 'Pneumologica',
+            'updated_at'    => date('Y-m-d h:s:i'),
+            'created_at'    => date('Y-m-d h:s:i')
         ], [
-            'description' => 'Psichiatrica'
+            'description' => 'Psichiatrica',
+            'updated_at'    => date('Y-m-d h:s:i'),
+            'created_at'    => date('Y-m-d h:s:i')
         ], [
-            'description' => 'Senologica'
+            'description' => 'Senologica',
+            'updated_at'    => date('Y-m-d h:s:i'),
+            'created_at'    => date('Y-m-d h:s:i')
         ], [
-            'description' => 'Urologica'
+            'description' => 'Urologica',
+            'updated_at'    => date('Y-m-d h:s:i'),
+            'created_at'    => date('Y-m-d h:s:i')
         ]]);
     }
 }
