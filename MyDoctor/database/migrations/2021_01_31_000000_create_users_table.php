@@ -32,7 +32,10 @@ class CreateUsersTable extends Migration
             $table->rememberToken();
             $table->timestamps();
             
-            $table->foreign('fiscal_code_doctor')->references('fiscal_code')->on('doctors')->onDelete('cascade');
+            //$table->foreign('fiscal_code_doctor')->references('fiscal_code')->on('doctors')->onDelete('cascade');
+        });
+        Schema::table('users', function(Blueprint $table) {
+            $table->foreign('fiscal_code_doctor')->references('fiscal_code')->on('doctors');
         });
     }
 

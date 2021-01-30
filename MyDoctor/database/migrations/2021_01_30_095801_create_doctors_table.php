@@ -14,7 +14,6 @@ class CreateDoctorsTable extends Migration
     public function up()
     {
         Schema::create('doctors', function (Blueprint $table) {
-
             $table->char('fiscal_code','16')->primary();
             $table->string('name','20');
             $table->string('surname','20');
