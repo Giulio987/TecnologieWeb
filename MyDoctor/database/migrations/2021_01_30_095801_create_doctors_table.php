@@ -14,14 +14,24 @@ class CreateDoctorsTable extends Migration
     public function up()
     {
         Schema::create('doctors', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->string('surname');
-            $table->string('email')->unique();
-            $table->string('password');
+
+            $table->char('fiscal_code','16')->primary();
+            $table->string('name','20');
+            $table->string('surname','20');
+            $table->string('email','50')->unique();
+            $table->char('gender','1');
+            $table->date('dob');
+            $table->string('phone_number','15')->unique();
+            $table->bigInteger('id_building')->unsigned();
+
             $table->integer('role')->default(1);
+            $table->timestamp('email_verified_at')->nullable();
+            $table->string('password'); 
             $table->rememberToken();
             $table->timestamps();
+
+
+            $table->foreign('id_building')->references('id')->on('buildings')->onDelete('cascade');
         });
     }
 
@@ -32,6 +42,6 @@ class CreateDoctorsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('doctor');
+        Schema::dropIfExists('doctors');
     }
 }
