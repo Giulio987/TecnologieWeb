@@ -2,84 +2,26 @@
 
 namespace App\Http\Controllers;
 
-use App\doctor;
 use Illuminate\Http\Request;
 
 class DoctorController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Create a new controller instance.
      *
-     * @return \Illuminate\Http\Response
+     * @return void
      */
-    public function index()
+    public function __construct()
     {
-        //
+        $this->middleware('auth:doctor');
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+    /*
+     * After logging as doctor the dashboard for doctor
+     * @return \Illuminate\Contracts\Support\Referable
+     * */
+    public function doctorDashboard()
     {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\doctor  $doctor
-     * @return \Illuminate\Http\Response
-     */
-    public function show(doctor $doctor)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\doctor  $doctor
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(doctor $doctor)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\doctor  $doctor
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, doctor $doctor)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\doctor  $doctor
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(doctor $doctor)
-    {
-        //
+        return view('doctor.dashboard');
     }
 }

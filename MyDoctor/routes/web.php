@@ -13,10 +13,32 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
+Route::view('/', 'welcome');
 Auth::routes();
 
+//********************************GET********************************
+//LoginController
+Route::get('/login/admin', 'Auth\LoginController@showAdminLoginForm')->name('admin_login');
+Route::get('/login/doctor', 'Auth\LoginController@showDoctorLoginForm')->name('doctor_login');
+
+//RegisterController
+Route::get('/register/admin', 'Auth\RegisterController@showAdminRegisterForm')->name('admin_register');
+Route::get('/register/doctor', 'Auth\RegisterController@showDoctorRegisterForm')->name('doctor_register');
+
+//DoctorController
+Route::get('/doctor', 'DoctorController@doctorDashboard')->name('doctor_dashboard');
+
+//AdminController
+Route::get('/admin', 'AdminController@adminDashboard')->name('admin_dashboard');
+
+//HomeController
 Route::get('/home', 'HomeController@index')->name('home');
+
+//********************************POST********************************
+//LoginController
+Route::post('/login/admin', 'Auth\LoginController@adminLogin')->name('admin_login');
+Route::post('/login/doctor', 'Auth\LoginController@doctorLogin')->name('doctor_login');
+
+//RegisterController
+Route::post('/register/admin', 'Auth\RegisterController@createAdmin')->name('admin_register');
+Route::post('/register/doctor', 'Auth\RegisterController@createDoctor')->name('doctor_register');
