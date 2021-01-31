@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'AdminsTableSeeder' => $baseDir . '/database/seeds/AdminsTableSeeder.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
     'App\\Http\\Controllers\\AdminController' => $baseDir . '/app/Http/Controllers/AdminController.php',
@@ -52,7 +53,6 @@ return array(
     'Brick\\Math\\Internal\\Calculator\\GmpCalculator' => $vendorDir . '/brick/math/src/Internal/Calculator/GmpCalculator.php',
     'Brick\\Math\\Internal\\Calculator\\NativeCalculator' => $vendorDir . '/brick/math/src/Internal/Calculator/NativeCalculator.php',
     'Brick\\Math\\RoundingMode' => $vendorDir . '/brick/math/src/RoundingMode.php',
-    'BuildingTableSeeder' => $baseDir . '/database/seeds/BuildingTableSeeder.php',
     'BuildingsTableSeeder' => $baseDir . '/database/seeds/BuildingsTableSeeder.php',
     'Carbon\\Carbon' => $vendorDir . '/nesbot/carbon/src/Carbon/Carbon.php',
     'Carbon\\CarbonConverterInterface' => $vendorDir . '/nesbot/carbon/src/Carbon/CarbonConverterInterface.php',

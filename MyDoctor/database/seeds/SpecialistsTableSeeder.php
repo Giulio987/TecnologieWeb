@@ -12,10 +12,6 @@ class SpecialistsTableSeeder extends Seeder
     public function run()
     {
         DB::table('specialists')->insert([[
-            'description' => 'Via E.Duse',
-            'updated_at'    => date('Y-m-d h:s:i'),
-            'created_at'    => date('Y-m-d h:s:i')
-        ], [
             'description' => 'Angiologica',
             'updated_at'    => date('Y-m-d h:s:i'),
             'created_at'    => date('Y-m-d h:s:i')
