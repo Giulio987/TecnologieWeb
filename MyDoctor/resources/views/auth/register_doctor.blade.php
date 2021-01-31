@@ -8,7 +8,7 @@
                 <div class="card-header">{{ isset($url) ? ucwords($url) : ""}} {{ __('Register') }}</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}" aria-label="{{ __('Register') }}">
+                    <form method="POST" action='{{ url("register/$url") }}' aria-label="{{ __('Register') }}">
                         @csrf
                         <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Nome') }}</label>
@@ -81,62 +81,18 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="street_address" class="col-md-4 col-form-label text-md-right">{{ __('Via') }}</label>
+                            <label for="id_building" class="col-md-4 col-form-label text-md-right">{{ __('Id Edificio') }}</label>
 
                             <div class="col-md-6">
-                                <input id="street_address" type="text" class="form-control @error('street_address') is-invalid @enderror" name="street_address" value="{{ old('street_address') }}" required autocomplete="street_address" autofocus>
+                                <input id="id_building" type="text" class="form-control @error('id_building') is-invalid @enderror" name="id_building" value="{{ old('id_building') }}" required autocomplete="id_building" autofocus>
 
-                                @error('street_address')
+                                @error('id_building')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
                                 @enderror
                             </div>
                         </div>
-                        
-                        <div class="form-group row">
-                            <label for="street_number" class="col-md-4 col-form-label text-md-right">{{ __('Numero Civico') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="street_number" type="text" class="form-control @error('street_number') is-invalid @enderror" name="street_number" value="{{ old('street_number') }}" required autocomplete="street_number" autofocus>
-
-                                @error('street_number')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="postal_code" class="col-md-4 col-form-label text-md-right">{{ __('Codice Postale') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="postal_code" type="text" class="form-control @error('postal_code') is-invalid @enderror" name="postal_code" value="{{ old('postal_code') }}" required autocomplete="postal_code" autofocus>
-
-                                @error('postal_code')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="city" class="col-md-4 col-form-label text-md-right">{{ __('Città') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="city" type="text" class="form-control @error('city') is-invalid @enderror" name="city" value="{{ old('city') }}" required autocomplete="city" autofocus>
-
-                                @error('city')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        
 
                         <div class="form-group row">
                             <label for="fiscal_code" class="col-md-4 col-form-label text-md-right">{{ __('Codice Fiscale') }}</label>
@@ -185,20 +141,6 @@
 
                             <div class="col-md-6">
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="fiscal_code_doctor" class="col-md-4 col-form-label text-md-right">{{ __('Codice Fiscale Dottore') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="fiscal_code_doctor" type="text" class="form-control @error('fiscal_code_doctor') is-invalid @enderror" name="fiscal_code_doctor" value="{{ old('fiscal_code_doctor') }}" required autocomplete="fiscal_code_doctor" autofocus>
-
-                                @error('fiscal_code_doctor')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                                @enderror
                             </div>
                         </div>
 

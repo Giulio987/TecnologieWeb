@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateVisitsTable extends Migration
+class CreatePrescriptionMedicinesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,17 @@ class CreateVisitsTable extends Migration
      */
     public function up()
     {
-        Schema::create('visits', function (Blueprint $table) {
+        Schema::create('prescription_medicines', function (Blueprint $table) {
             $table->id('id');
-            $table->char('fiscal_code_pazient', '16');
+            $table->char('fiscal_code_user', '16');
             $table->char('fiscal_code_doctor', '16');
-            $table->date('visit_data');
+            $table->char('aic', '10');
+            $table->date('date');
             $table->timestamps();
 
-            $table->foreign('fiscal_code_pazient')->references('fiscal_code')->on('users')->onDelete('cascade');
+            $table->foreign('fiscal_code_user')->references('fiscal_code')->on('users')->onDelete('cascade');
             $table->foreign('fiscal_code_doctor')->references('fiscal_code')->on('doctors')->onDelete('cascade');
+            $table->foreign('aic')->references('aic')->on('medicines')->onDelete('cascade');
         });
     }
 
@@ -32,6 +34,6 @@ class CreateVisitsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('visits');
+        Schema::dropIfExists('prescription_medicines');
     }
 }

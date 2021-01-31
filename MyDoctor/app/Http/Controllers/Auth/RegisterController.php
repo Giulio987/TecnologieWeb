@@ -54,9 +54,19 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required', 'string', 'min:8', 'confirmed'],
+                'fiscal_code'        => ['required', 'string', 'min:16', 'max:16','unique:users'],
+                'name' 		         => ['required', 'string', 'max:20'],
+                'surname'            => ['required', 'string', 'max:20'],
+                'email'              => ['required', 'string', 'email', 'max:50', 'unique:users'],
+                'dob'                => ['required', 'date'],
+                'phone_number'       => ['required', 'string', 'max:15', 'unique:users'],
+                'gender'             => ['required', 'string', 'max:1'],
+                'street_address'     => ['required', 'string', 'max:50'],
+                'street_number'      => ['required', 'string', 'max:8'],
+                'postal_code'        => ['required', 'string', 'max:5'],
+                'city'               => ['required', 'string', 'max:30'],
+                'fiscal_code_doctor' => ['required', 'string', 'min:16', 'max:16'],
+                'password'           => ['required', 'string', 'min:8', 'confirmed'],
         ]);
     }
 
@@ -69,15 +79,34 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => Hash::make($data['password']),
+            'fiscal_code'        => $data['fiscal_code'],
+            'name'               => $data['name'],
+            'surname'            => $data['surname'],
+            'email'              => $data['email'],
+            'dob'                => $data['dob'],
+            'phone_number'       => $data['phone_number'],
+            'gender'             => $data['gender'],
+            'street_address'     => $data['street_address'],
+            'street_number'      => $data['street_number'],
+            'postal_code'        => $data['postal_code'],
+            'city'               => $data['city'],
+            'fiscal_code_doctor' => $data['fiscal_code_doctor'],
+            'password'           => Hash::make($data['password']),
+        ]);
+    }
+
+    protected function validatorAdmin(array $data)
+    {
+        return Validator::make($data, [
+                'name' 		         => ['required', 'string', 'max:20'],
+                'email'              => ['required', 'string', 'email', 'max:50', 'unique:admins'],
+                'password'           => ['required', 'string', 'min:8', 'confirmed'],
         ]);
     }
 
     public function showAdminRegisterForm()
     {
-        return view('auth.register', ['url' => 'admin']);
+        return view('auth.register_admin', ['url' => 'admin']);
     }
 
     /**
@@ -87,7 +116,7 @@ class RegisterController extends Controller
      */
     protected function createAdmin(Request $request)
     {
-        $this->validator($request->all())->validate();
+        $this->validatorAdmin($request->all())->validate();
         Admin::create([
             'name' => $request->name,
             'email' => $request->email,
@@ -96,12 +125,27 @@ class RegisterController extends Controller
         return redirect()->intended('login/admin');
     }
 
+    protected function validatorDoctor(array $data)
+    {
+        return Validator::make($data, [
+                'fiscal_code'        => ['required', 'string', 'min:16', 'max:16','unique:doctors'],
+                'name' 		         => ['required', 'string', 'max:20'],
+                'surname'            => ['required', 'string', 'max:20'],
+                'email'              => ['required', 'string', 'email', 'max:50', 'unique:doctors'],
+                'dob'                => ['required', 'date'],
+                'phone_number'       => ['required', 'string', 'max:15', 'unique:doctors'],
+                'gender'             => ['required', 'string', 'max:1'],
+                'id_building'        => ['required', 'integer'],
+                'password'           => ['required', 'string', 'min:8', 'confirmed'],
+        ]);
+    }
+
     /**
      * @return Factory|View
      */
     public function showDoctorRegisterForm()
     {
-        return view('auth.register', ['url' => 'doctor']);
+        return view('auth.register_doctor', ['url' => 'doctor']);
     }
 
     /**
@@ -111,12 +155,19 @@ class RegisterController extends Controller
      */
     protected function createDoctor(Request $request)
     {
-        $this->validator($request->all())->validate();
+        $this->validatorDoctor($request->all())->validate();
         Doctor::create([
-            'name' => $request->name,
-            'surname' => $request->surname,
-            'email' => $request->email,
-            'password' => Hash::make($request->password),
+            'fiscal_code'  => $request->fiscal_code,
+            'name'         => $request->name,
+            'surname'      => $request->surname,
+            'email'        => $request->email,
+            'gender'       => $request->gender,
+            'dob'          => $request->dob,
+            'phone_number' => $request->phone_number,
+            'id_building'  => $request->id_building,
+            'password'     => Hash::make($request->password),
+
+
         ]);
         return redirect()->intended('login/doctor');
     }

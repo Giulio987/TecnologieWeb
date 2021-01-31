@@ -76,3 +76,10 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## Appunti
+
+1. Migrazione --> crea le colonne delle tabelle;
+2. RegisterController --> inserisci le colonne nella relativa tabella;
+3. Models --> inserisci in $fillable la colonna;
+4. Sistema il register_name.blade.php

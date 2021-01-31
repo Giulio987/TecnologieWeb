@@ -14,7 +14,8 @@ class CreateUsersTable extends Migration
     public function up()
     {
         Schema::create('users', function (Blueprint $table) {
-            $table->char('fiscal_code', '16')->primary();
+            $table->id('id');
+            $table->char('fiscal_code', '16')->unique();
             $table->string('name', '20');
             $table->string('surname', '20');
             $table->string('email', '50')->unique();
@@ -32,10 +33,7 @@ class CreateUsersTable extends Migration
             $table->rememberToken();
             $table->timestamps();
             
-            //$table->foreign('fiscal_code_doctor')->references('fiscal_code')->on('doctors')->onDelete('cascade');
-        });
-        Schema::table('users', function(Blueprint $table) {
-            $table->foreign('fiscal_code_doctor')->references('fiscal_code')->on('doctors');
+            $table->foreign('fiscal_code_doctor')->references('fiscal_code')->on('doctors')->onDelete('cascade');
         });
     }
 

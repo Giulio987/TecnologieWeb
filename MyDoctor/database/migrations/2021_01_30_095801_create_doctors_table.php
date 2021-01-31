@@ -14,7 +14,8 @@ class CreateDoctorsTable extends Migration
     public function up()
     {
         Schema::create('doctors', function (Blueprint $table) {
-            $table->char('fiscal_code','16')->primary();
+            $table->id('id');
+            $table->char('fiscal_code','16')->unique();
             $table->string('name','20');
             $table->string('surname','20');
             $table->string('email','50')->unique();
@@ -22,13 +23,9 @@ class CreateDoctorsTable extends Migration
             $table->date('dob');
             $table->string('phone_number','15')->unique();
             $table->bigInteger('id_building')->unsigned();
-
-            $table->integer('role')->default(1);
-            $table->timestamp('email_verified_at')->nullable();
             $table->string('password'); 
             $table->rememberToken();
             $table->timestamps();
-
 
             $table->foreign('id_building')->references('id')->on('buildings')->onDelete('cascade');
         });
@@ -41,6 +38,6 @@ class CreateDoctorsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('doctors');
+        Schema::dropIfExists('doctor');
     }
 }
