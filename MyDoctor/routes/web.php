@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::view('/', 'welcome');
+//Route::get('/', 'HomeController@index');
 Auth::routes();
 
 //********************************GET********************************
@@ -32,7 +32,8 @@ Route::get('/doctor', 'DoctorController@doctorDashboard')->name('doctor_dashboar
 Route::get('/admin', 'AdminController@adminDashboard')->name('admin_dashboard');
 
 //HomeController
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/user', 'HomeController@index')->name('user_dashboard');
+Route::resource('user', 'HomeController');
 
 //********************************POST********************************
 //LoginController
