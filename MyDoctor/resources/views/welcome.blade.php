@@ -21,7 +21,7 @@
         <div class="row">
           <div class="col-lg-4 d-flex align-items-stretch">
             <div class="content">
-              <h3>Why Choose Medilab?</h3>
+              <h3>Perchè scegliere MyDoctor?</h3>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit
                 Asperiores dolores sed et. Tenetur quia eos. Autem tempore quibusdam vel necessitatibus optio ad corporis.
@@ -109,7 +109,7 @@
           <div class="col-lg-3 col-md-6">
             <div class="count-box">
               <i class="icofont-doctor-alt"></i>
-              <span data-toggle="counter-up">85</span>
+              <span class="count">20</span>
               <p>Doctors</p>
             </div>
           </div>
@@ -117,7 +117,7 @@
           <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
             <div class="count-box">
               <i class="icofont-patient-bed"></i>
-              <span data-toggle="counter-up">18</span>
+              <span class="count">18</span>
               <p>Departments</p>
             </div>
           </div>
@@ -125,7 +125,7 @@
           <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
             <div class="count-box">
               <i class="icofont-laboratory"></i>
-              <span data-toggle="counter-up">8</span>
+              <span class="count">8</span>
               <p>Research Labs</p>
             </div>
           </div>
@@ -133,7 +133,7 @@
           <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
             <div class="count-box">
               <i class="icofont-award"></i>
-              <span data-toggle="counter-up">150</span>
+              <span class="count">150</span>
               <p>Awards</p>
             </div>
           </div>
