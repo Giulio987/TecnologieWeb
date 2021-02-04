@@ -38,6 +38,9 @@
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
+
+
+
 *,
 *::before,
 *::after {
@@ -12273,3 +12276,24 @@ Dottori
   color: #fff;
   text-decoration: none;
 }
+
+.dim-img-card {
+  max-width: 100%;
+  max-height: 100%;
+  -moz-border-radius: 20px  20px  0px  0px;   
+  -webkit-border-radius: 20px  20px  0px  0px;
+  border-radius: 20px  20px  0px  0px;
+}
+
+.border-card {
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
+}
+
+.border-button {
+  -moz-border-radius: 0px 0px 20px 20px;
+  -webkit-border-radius: 0px 0px 20px 20px;
+  border-radius: 0px 0px 20px 20px;
+}
+
