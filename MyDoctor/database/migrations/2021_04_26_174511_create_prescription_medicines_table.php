@@ -15,15 +15,15 @@ class CreatePrescriptionMedicinesTable extends Migration
     {
         Schema::create('prescription_medicines', function (Blueprint $table) {
             $table->id('id');
-            $table->char('fiscal_code_user', '16');
-            $table->char('fiscal_code_doctor', '16');
-            $table->char('aic', '10');
+            $table->bigInteger('id_user')->unsigned();
+            $table->bigInteger('id_doctor')->unsigned();
+            $table->string('description_medicine');
+            $table->string('status');
             $table->date('date');
             $table->timestamps();
 
-            $table->foreign('fiscal_code_user')->references('fiscal_code')->on('users')->onDelete('cascade');
-            $table->foreign('fiscal_code_doctor')->references('fiscal_code')->on('doctors')->onDelete('cascade');
-            $table->foreign('aic')->references('aic')->on('medicines')->onDelete('cascade');
+            $table->foreign('id_user')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('id_doctor')->references('id')->on('doctors')->onDelete('cascade');;
         });
     }
 

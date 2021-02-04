@@ -23,7 +23,7 @@ class UsersTableSeeder extends Seeder
             'street_number'      => '248/b',
             'postal_code'        => '40121',
             'city'               => 'Bologna',
-            'fiscal_code_doctor' => 'PRSTQT83D22C338N',
+            'id_doctor'          => '4',
             'password'           => bcrypt('pazient'),
             'updated_at'         => date('Y-m-d h:s:i'),
             'created_at'         => date('Y-m-d h:s:i')
@@ -40,7 +40,7 @@ class UsersTableSeeder extends Seeder
             'street_number'      => '33',
             'postal_code'        => '40121',
             'city'               => 'Bologna',
-            'fiscal_code_doctor' => 'CLVSDI28P61D491Y',
+            'id_doctor'          => '4',
             'password'           => bcrypt('pazient'),
             'updated_at'         => date('Y-m-d h:s:i'),
             'created_at'         => date('Y-m-d h:s:i')
@@ -56,7 +56,7 @@ class UsersTableSeeder extends Seeder
             'street_number'      => '186',
             'postal_code'        => '40121',
             'city'               => 'Bologna',
-            'fiscal_code_doctor' => 'CLVSDI28P61D491Y',
+            'id_doctor'          => '3',
             'password'           => bcrypt('pazient'),
             'updated_at'         => date('Y-m-d h:s:i'),
             'created_at'         => date('Y-m-d h:s:i')
@@ -72,7 +72,7 @@ class UsersTableSeeder extends Seeder
             'street_number'      => '179/e',
             'postal_code'        => '40121',
             'city'               => 'Bologna',
-            'fiscal_code_doctor' => 'CHNLDE02H52B429N',
+            'id_doctor'          => '1',
             'password'           => bcrypt('pazient'),
             'updated_at'         => date('Y-m-d h:s:i'),
             'created_at'         => date('Y-m-d h:s:i')
@@ -88,7 +88,7 @@ class UsersTableSeeder extends Seeder
             'street_number'      => '292',
             'postal_code'        => '40121',
             'city'               => 'Bologna',
-            'fiscal_code_doctor' => 'CHNLDE02H52B429N',
+            'id_doctor'          => '1',
             'password'           => bcrypt('pazient'),
             'updated_at'         => date('Y-m-d h:s:i'),
             'created_at'         => date('Y-m-d h:s:i')
@@ -104,7 +104,7 @@ class UsersTableSeeder extends Seeder
             'street_number'      => '211/h',
             'postal_code'        => '44100',
             'city'               => 'Ferrara',
-            'fiscal_code_doctor' => 'CHLLVC92M47C950A',
+            'id_doctor'          => '2',
             'password'           => bcrypt('pazient'),
             'updated_at'         => date('Y-m-d h:s:i'),
             'created_at'         => date('Y-m-d h:s:i')
@@ -120,7 +120,7 @@ class UsersTableSeeder extends Seeder
             'street_number'      => '14',
             'postal_code'        => '44100',
             'city'               => 'Ferrara',
-            'fiscal_code_doctor' => 'CHLLVC92M47C950A',
+            'id_doctor'          => '2',
             'password'           => bcrypt('pazient'),
             'updated_at'         => date('Y-m-d h:s:i'),
             'created_at'         => date('Y-m-d h:s:i')
@@ -136,7 +136,7 @@ class UsersTableSeeder extends Seeder
             'street_number'      => '226',
             'postal_code'        => '44100',
             'city'               => 'Ferrara',
-            'fiscal_code_doctor' => 'CHLLVC92M47C950A',
+            'id_doctor'          => '2',
             'password'           => bcrypt('pazient'),
             'updated_at'         => date('Y-m-d h:s:i'),
             'created_at'         => date('Y-m-d h:s:i')
@@ -152,7 +152,7 @@ class UsersTableSeeder extends Seeder
             'street_number'      => '47/b',
             'postal_code'        => '44100',
             'city'               => 'Ferrara',
-            'fiscal_code_doctor' => 'BNCCTN08R06B859V',
+            'id_doctor'          => '5',
             'password'           => bcrypt('pazient'),
             'updated_at'         => date('Y-m-d h:s:i'),
             'created_at'         => date('Y-m-d h:s:i')
@@ -168,7 +168,7 @@ class UsersTableSeeder extends Seeder
             'street_number'      => '225',
             'postal_code'        => '44100',
             'city'               => 'Ferrara',
-            'fiscal_code_doctor' => 'BNCCTN08R06B859V',
+            'id_doctor'          => '5',
             'password'           => bcrypt('pazient'),
             'updated_at'         => date('Y-m-d h:s:i'),
             'created_at'         => date('Y-m-d h:s:i')

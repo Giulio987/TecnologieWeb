@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Prescription_Medicine;
 use Illuminate\Http\Request;
 
-class PrescriptionMedicineController extends Controller
+class Prescription_MedicineController extends Controller
 {
     /**
      * Display a listing of the resource.

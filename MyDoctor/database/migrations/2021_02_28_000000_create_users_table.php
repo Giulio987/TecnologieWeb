@@ -26,14 +26,14 @@ class CreateUsersTable extends Migration
             $table->string('street_number', '8');
             $table->string('postal_code', '5');
             $table->string('city', '30');
-            $table->char('fiscal_code_doctor', '16');
+            $table->bigInteger('id_doctor')->unsigned();
 
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
             
-            $table->foreign('fiscal_code_doctor')->references('fiscal_code')->on('doctors')->onDelete('cascade');
+            $table->foreign('id_doctor')->references('id')->on('doctors')->onDelete('cascade');
         });
     }
 

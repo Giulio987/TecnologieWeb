@@ -15,15 +15,14 @@ class CreatePrescriptionSpecialistsTable extends Migration
     {
         Schema::create('prescription_specialists', function (Blueprint $table) {
             $table->id('id');
-            $table->char('fiscal_code_user', '16');
-            $table->char('fiscal_code_doctor', '16');
-            $table->bigInteger('id_specialist')->unsigned();
+            $table->bigInteger('id_user')->unsigned();
+            $table->bigInteger('id_doctor')->unsigned();
+            $table->string('status');
             $table->date('date');
             $table->timestamps();
 
-            $table->foreign('fiscal_code_user')->references('fiscal_code')->on('users')->onDelete('cascade');
-            $table->foreign('fiscal_code_doctor')->references('fiscal_code')->on('doctors')->onDelete('cascade');
-            $table->foreign('id_specialist')->references('id')->on('specialists')->onDelete('cascade');
+            $table->foreign('id_user')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('id_doctor')->references('id')->on('doctors')->onDelete('cascade');
         });
     }
 

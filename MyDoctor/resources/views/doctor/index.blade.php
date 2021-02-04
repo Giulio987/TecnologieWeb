@@ -36,7 +36,7 @@
                             <div class="card-body">
                                 <h4 class="card-title">Ricette Farmaci</h4>
                                 <p>Copy paste the HTML and CSS.</p>
-                                <a href="{{ URL::action('PrescriptionMedicineController@index') }}" class="btn btn-secondary">Indietro</a>
+                                <a href="{{ URL::action('Prescription_MedicineController@index') }}" class="btn btn-secondary">Indietro</a>
                             </div>
                         </div>
                     </div>
