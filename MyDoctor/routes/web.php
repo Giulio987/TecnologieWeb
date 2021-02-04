@@ -43,3 +43,6 @@ Route::post('/login/doctor', 'Auth\LoginController@doctorLogin')->name('doctor_l
 //RegisterController
 Route::post('/register/admin', 'Auth\RegisterController@createAdmin')->name('admin_register');
 Route::post('/register/doctor', 'Auth\RegisterController@createDoctor')->name('doctor_register');
+
+//PrescriptionMedicine
+Route::resource('prescription_medicine', 'PrescriptionMedicineController');

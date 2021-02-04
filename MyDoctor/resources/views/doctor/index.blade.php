@@ -36,7 +36,7 @@
                             <div class="card-body">
                                 <h4 class="card-title">Ricette Farmaci</h4>
                                 <p>Copy paste the HTML and CSS.</p>
-                                <a href="#" class="btn btn-primary btn-sm">Read More</a>
+                                <a href="{{ URL::action('PrescriptionMedicineController@index') }}" class="btn btn-secondary">Indietro</a>
                             </div>
                         </div>
                     </div>
@@ -88,5 +88,37 @@
             <!--end card-->
         </div>
     </div>
+
+    <!--form-->
+    <div class="row">
+        <form action="" method="POST">
+            {{ csrf_field() }}
+
+            <div class="form-group">
+                <label for="data">Data</label>
+                <input type="date" class="form-control" name="data">
+                <small class="form-text text-muted">Inserisci la data</small>
+            </div>
+
+            <div>
+                <label for="aic">AIC</label>
+                <input type="text" class="form-control" name="aic">
+                <small class="form-text text-muted">Inserisci AIC farmaco</small>
+            </div>
+
+            <div class="form-group">
+                <label for="fiscal_code_user">Codice Fiscale Paziente</label>
+                <input type="text" class="form-control" name="description">
+                <small class="form-text text-muted">Inserisci Codice Fiscale paziente</small>
+            </div>
+
+            <div class="form-group">
+                <label for="amount">Cifra</label>
+                <input type="number" class="form-control" name="amount">
+                <small class="form-text text-muted">Inserisci la cifra spesa</small>
+            </div>
+        </form>
+    </div>
+
 </div>
 @endsection
