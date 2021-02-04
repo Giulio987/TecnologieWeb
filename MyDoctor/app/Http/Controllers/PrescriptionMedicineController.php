@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Prescription_Medicine;
 use Illuminate\Http\Request;
 
-class Prescription_MedicineController extends Controller
+class PrescriptionMedicineController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +13,7 @@ class Prescription_MedicineController extends Controller
      */
     public function index()
     {
-        return view('prescription_medicine.index');
+        return view('prescriptionMedicine.index');
     }
 
     /**
@@ -41,10 +40,10 @@ class Prescription_MedicineController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Prescription_Medicine  $prescription_Medicine
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Prescription_Medicine $prescription_Medicine)
+    public function show($id)
     {
         //
     }
@@ -52,10 +51,10 @@ class Prescription_MedicineController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Prescription_Medicine  $prescription_Medicine
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Prescription_Medicine $prescription_Medicine)
+    public function edit($id)
     {
         //
     }
@@ -64,10 +63,10 @@ class Prescription_MedicineController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Prescription_Medicine  $prescription_Medicine
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Prescription_Medicine $prescription_Medicine)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -75,10 +74,10 @@ class Prescription_MedicineController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Prescription_Medicine  $prescription_Medicine
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Prescription_Medicine $prescription_Medicine)
+    public function destroy($id)
     {
         //
     }

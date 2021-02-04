@@ -45,4 +45,4 @@ Route::post('/register/admin', 'Auth\RegisterController@createAdmin')->name('adm
 Route::post('/register/doctor', 'Auth\RegisterController@createDoctor')->name('doctor_register');
 
 //PrescriptionMedicine
-Route::resource('prescription_medicine', 'PrescriptionMedicineController');
+Route::resource('prescriptionMedicine', 'PrescriptionMedicineController');
