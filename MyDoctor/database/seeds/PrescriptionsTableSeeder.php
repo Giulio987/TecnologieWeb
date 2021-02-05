@@ -16,6 +16,7 @@ class PrescriptionsTableSeeder extends Seeder
             'id_doctor'     => '4',
             'description'   => 'oki',
             'status'        => 'confermata',
+            'type'          => 'Farmaco',
             'date'          => date('Y-m-d'),
         ]]);
     }

@@ -20,6 +20,7 @@ class CreatePrescriptionsTable extends Migration
             $table->string('description');
             $table->string('status');
             $table->date('date');
+            $table->string('type');
             $table->timestamps();
 
             $table->foreign('id_user')->references('id')->on('users')->onDelete('cascade');
