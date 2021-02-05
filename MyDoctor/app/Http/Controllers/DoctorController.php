@@ -22,6 +22,6 @@ class DoctorController extends Controller
      * */
     public function doctorDashboard()
     {
-        return view('doctor.index');
+        return view('doctor.dashboard');
     }
 }

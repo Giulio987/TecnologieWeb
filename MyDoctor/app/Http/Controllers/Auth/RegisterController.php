@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Auth;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
-use App\User;
+use App\Models\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -65,7 +65,7 @@ class RegisterController extends Controller
                 'street_number'      => ['required', 'string', 'max:8'],
                 'postal_code'        => ['required', 'string', 'max:5'],
                 'city'               => ['required', 'string', 'max:30'],
-                'fiscal_code_doctor' => ['required', 'string', 'min:16', 'max:16'],
+                'id_doctor'          => ['required', 'integer',],
                 'password'           => ['required', 'string', 'min:8', 'confirmed'],
         ]);
     }
@@ -74,7 +74,7 @@ class RegisterController extends Controller
      * Create a new user instance after a valid registration.
      *
      * @param array $data
-     * @return \App\User
+     * @return \App\\Models\User
      */
     protected function create(array $data)
     {
@@ -90,7 +90,7 @@ class RegisterController extends Controller
             'street_number'      => $data['street_number'],
             'postal_code'        => $data['postal_code'],
             'city'               => $data['city'],
-            'fiscal_code_doctor' => $data['fiscal_code_doctor'],
+            'id_doctor'          => $data['id_doctor'],
             'password'           => Hash::make($data['password']),
         ]);
     }

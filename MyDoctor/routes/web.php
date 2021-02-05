@@ -32,7 +32,7 @@ Route::get('/doctor', 'DoctorController@doctorDashboard')->name('doctor_dashboar
 Route::get('/admin', 'AdminController@adminDashboard')->name('admin_dashboard');
 
 //HomeController
-Route::get('/user', 'HomeController@index')->name('user_dashboard');
+Route::get('/home', 'HomeController@index')->name('user_dashboard');
 Route::resource('user', 'HomeController');
 
 //********************************POST********************************
@@ -43,6 +43,3 @@ Route::post('/login/doctor', 'Auth\LoginController@doctorLogin')->name('doctor_l
 //RegisterController
 Route::post('/register/admin', 'Auth\RegisterController@createAdmin')->name('admin_register');
 Route::post('/register/doctor', 'Auth\RegisterController@createDoctor')->name('doctor_register');
-
-//PrescriptionMedicine
-Route::resource('prescriptionMedicine', 'PrescriptionMedicineController');

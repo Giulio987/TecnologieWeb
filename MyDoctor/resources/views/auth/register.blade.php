@@ -189,12 +189,12 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="fiscal_code_doctor" class="col-md-4 col-form-label text-md-right">{{ __('Codice Fiscale Dottore') }}</label>
+                            <label for="id_doctor" class="col-md-4 col-form-label text-md-right">{{ __('ID Dottore') }}</label>
 
                             <div class="col-md-6">
-                                <input id="fiscal_code_doctor" type="text" class="form-control @error('fiscal_code_doctor') is-invalid @enderror" name="fiscal_code_doctor" value="{{ old('fiscal_code_doctor') }}" required autocomplete="fiscal_code_doctor" autofocus>
+                                <input id="id_doctor" type="text" class="form-control @error('id_doctor') is-invalid @enderror" name="id_doctor" value="{{ old('id_doctor') }}" required autocomplete="id_doctor" autofocus>
 
-                                @error('fiscal_code_doctor')
+                                @error('id_doctor')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>

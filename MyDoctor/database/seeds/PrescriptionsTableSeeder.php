@@ -14,9 +14,10 @@ class PrescriptionsTableSeeder extends Seeder
         DB::table('prescriptions')->insert([[
             'id_user'       => '1',
             'id_doctor'     => '4',
-            'description'    => 'oki',
+            'description'   => 'oki',
             'status'        => 'confermata',
             'date'          => date('Y-m-d'),
         ]]);
     }
 }
+
