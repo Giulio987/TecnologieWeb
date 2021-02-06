@@ -6,16 +6,16 @@
           <div class="col-md-4 my-3">
             <div class="card h-100 border-card">
               <img src="images/relazione-medico-paziente-1024x683.jpg" class="card-img-top dim-img-card" alt="...">
-              <a type="button" class="btn btn-outline-primary border-button py-4" href="#" role="button">
-                <p class="card-text font-weight-bold text-uppercase">Aggiungi Dottori</p>
+              <a type="button" class="btn btn-outline-primary border-button py-4" href="{{ URL::action('DoctorController@doctorDashboard') }}" role="button">
+                <p class="card-text font-weight-bold text-uppercase">Dottori</p>
               </a>
             </div>
           </div>
           <div class="col-md-4 my-3">
             <div class="card h-100 border-card">
               <img src="images/farmaci-senza-ricetta1.jpg" class="card-img-top dim-img-card" alt="...">
-              <a type="button" class="btn btn-outline-primary border-button py-4" href="{{ URL::action('PrescriptionController@index') }}" role="button">
-                <p class="card-text font-weight-bold text-uppercase">Rimuovi Dottore</p>
+              <a type="button" class="btn btn-outline-primary border-button py-4" href="{{ URL::action('HomeController@index') }}" role="button">
+                <p class="card-text font-weight-bold text-uppercase">Pazienti</p>
               </a>
             </div>
           </div>
@@ -24,16 +24,16 @@
           <div class="col-md-4 my-3">
             <div class="card h-100 border-card">
               <img src="images/prescrizione-ricetta.jpg" class="card-img-top dim-img-card" alt="...">
-              <a type="button" class="btn btn-outline-primary border-button py-4" href="#" role="button">
-                <p class="card-text font-weight-bold text-uppercase">Prescivi ricetta per visita specialistica</p>
+              <a type="button" class="btn btn-outline-primary border-button py-4" href="{{ URL::action('VisitController@index') }}" role="button">
+                <p class="card-text font-weight-bold text-uppercase">Visite</p>
               </a>
             </div>
           </div>
           <div class="col-md-4  my-3">
             <div class="card h-100 border-card">
               <img src="images/pexels-jess-bailey-designs-1558691.jpg" class="card-img-top dim-img-card" alt="...">
-              <a type="button" class="btn btn-outline-primary border-button py-4" href="#" role="button">
-                <p class="card-text font-weight-bold text-uppercase">Visualizza i tuoi appuntamenti</p>
+              <a type="button" class="btn btn-outline-primary border-button py-4" href="{{ URL::action('PrescriptionController@index') }}" role="button">
+                <p class="card-text font-weight-bold text-uppercase">Ricette</p>
               </a>
             </div>
           </div>
