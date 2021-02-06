@@ -33,7 +33,7 @@ Route::get('/admin', 'AdminController@adminDashboard')->name('admin_dashboard');
 
 //HomeController
 Route::get('/home', 'HomeController@index')->name('user_dashboard');
-Route::resource('user', 'HomeController');
+Route::get('/home/visit/create', 'HomeController@create_visit');
 
 //********************************POST********************************
 //LoginController
