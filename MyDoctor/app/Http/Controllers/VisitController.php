@@ -2,14 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Prescription;
+use App\Visit;
 use Illuminate\Http\Request;
 
-use Log;
-use App\Models\Doctor;
-use App\Models\User;
-
-class PrescriptionController extends Controller
+class VisitController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,9 +14,7 @@ class PrescriptionController extends Controller
      */
     public function index()
     {
-        $pres = Prescription::all();
-
-        return view('prescription.index');
+        //
     }
 
     /**
@@ -30,7 +24,7 @@ class PrescriptionController extends Controller
      */
     public function create()
     {
-        return view('prescription.create');
+        //
     }
 
     /**
@@ -41,21 +35,16 @@ class PrescriptionController extends Controller
      */
     public function store(Request $request)
     {
-        $input = $request -> all();
-        Prescription::create($input);
-
-        Log::info($input);
-
-        return redirect('/prescription');
+        //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Prescription  $prescription
+     * @param  \App\Visit  $visit
      * @return \Illuminate\Http\Response
      */
-    public function show(Prescription $prescription)
+    public function show(Visit $visit)
     {
         //
     }
@@ -63,10 +52,10 @@ class PrescriptionController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Prescription  $prescription
+     * @param  \App\Visit  $visit
      * @return \Illuminate\Http\Response
      */
-    public function edit(Prescription $prescription)
+    public function edit(Visit $visit)
     {
         //
     }
@@ -75,10 +64,10 @@ class PrescriptionController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Prescription  $prescription
+     * @param  \App\Visit  $visit
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Prescription $prescription)
+    public function update(Request $request, Visit $visit)
     {
         //
     }
@@ -86,10 +75,10 @@ class PrescriptionController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Prescription  $prescription
+     * @param  \App\Visit  $visit
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Prescription $prescription)
+    public function destroy(Visit $visit)
     {
         //
     }

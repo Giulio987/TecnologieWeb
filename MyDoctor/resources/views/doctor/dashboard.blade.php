@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.layout_login')
 
 @section('content')
 
@@ -16,17 +16,7 @@
       <div class="card h-100 border-card">
         <img src="images/farmaci-senza-ricetta1.jpg" class="card-img-top dim-img-card" alt="...">
         <a type="button" class="btn btn-outline-primary border-button py-4" href="{{ URL::action('PrescriptionController@index') }}" role="button">
-          <p class="card-text font-weight-bold text-uppercase">Prescivi ricetta per farmaco</p>
-        </a>
-      </div>
-    </div>
-  </div>
-  <div class="row card-check my-3">
-    <div class="col-md-4 my-3">
-      <div class="card h-100 border-card">
-        <img src="images/prescrizione-ricetta.jpg" class="card-img-top dim-img-card" alt="...">
-        <a type="button" class="btn btn-outline-primary border-button py-4" href="#" role="button">
-          <p class="card-text font-weight-bold text-uppercase">Prescivi ricetta per visita specialistica</p>
+          <p class="card-text font-weight-bold text-uppercase">Prescivi una ricetta</p>
         </a>
       </div>
     </div>
@@ -40,5 +30,4 @@
     </div>
   </div>
 </div>
-
 @endsection
