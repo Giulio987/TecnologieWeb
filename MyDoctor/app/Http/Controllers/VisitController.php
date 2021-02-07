@@ -17,13 +17,6 @@ class VisitController extends Controller
         return view('visit.index');
     }
 
-    public function indexAdmin()
-    {
-        //$pres = Prescription::all();
-
-        return view('admin.visit.index');
-    }
-
     /**
      * Show the form for creating a new resource.
      *

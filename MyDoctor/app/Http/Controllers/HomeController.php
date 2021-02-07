@@ -25,16 +25,10 @@ class HomeController extends Controller
     {
         return view('user.dashboard');
     }
-    public function indexAdmin()
-    {
-        return view('admin.user.index');
-    }
-
+    
     public function create_visit()
     {
         return view('user.visit.create');
     }
 
-
-    
 }

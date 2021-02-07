@@ -17,16 +17,9 @@ class PrescriptionController extends Controller
     public function index()
     {
         $prescription = Prescription::all();
-        return view('prescription.index');
+        return view('prescription.index', compact('prescriptions'));
     }
-    public function indexAdmin()
-    {
-        //$pres = Prescription::all();
-
-        return view('admin.prescription.index');
-    }
-
-
+    
     /**
      * Show the form for creating a new resource.
      *

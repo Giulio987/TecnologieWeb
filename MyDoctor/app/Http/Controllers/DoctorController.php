@@ -9,15 +9,6 @@ use Log;
 class DoctorController extends Controller
 {
     /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function indexAdmin()
-    {
-        return view('admin.doctor.index');
-    }
-    /**
      * Create a new controller instance.
      *
      * @return void

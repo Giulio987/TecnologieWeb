@@ -30,10 +30,10 @@ Route::get('/doctor', 'DoctorController@doctorDashboard')->name('doctor_dashboar
 
 //AdminController
 Route::get('/admin', 'AdminController@adminDashboard')->name('admin_dashboard');
-Route::get('/admin/doctor', 'DoctorController@indexAdmin');
-Route::get('/admin/user', 'HomeController@indexAdmin');
-Route::get('/admin/prescription', 'PrescriptionController@indexAdmin');
-Route::get('/admin/visit', 'VisitController@indexAdmin');
+Route::get('/admin/doctor', 'AdminController@indexDoctor');
+Route::get('/admin/user', 'AdminController@indexUser');
+Route::get('/admin/prescription', 'AdminController@indexPres');
+Route::get('/admin/visit', 'AdminController@indexVisit');
 
 //HomeController
 Route::get('/home', 'HomeController@index')->name('user_dashboard');
