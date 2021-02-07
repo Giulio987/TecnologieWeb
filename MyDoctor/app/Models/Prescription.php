@@ -12,7 +12,11 @@ class Prescription extends Model
 
     public function user()
     {
-        return $this->belongsTo('App\Models\User');  //una prescrizione appartiene a un paziente
+        return $this->belongsTo('App\Models\User', 'id_user');  //una prescrizione appartiene a un paziente
     }
 
+    public function doctor()
+    {
+        return $this->belongsTo('App\Models\Doctor');
+    }
 }

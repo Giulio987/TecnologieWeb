@@ -9,7 +9,7 @@ use Illuminate\Notifications\Notifiable;
 class User extends Authenticatable
 {
     use Notifiable;
-
+    
     /**
      * The attributes that are mass assignable.
      *
@@ -39,7 +39,7 @@ class User extends Authenticatable
 
     public function prescriptions()
     {
-        return $this->hasMany('App\Models\Prescription');  //un paziente ha molte ricette (N:1)
+        return $this->hasMany('App\Models\Prescription', 'id_user');  //un paziente ha molte ricette (N:1)
     }
 
 }

@@ -16,7 +16,7 @@ class PrescriptionController extends Controller
      */
     public function index()
     {
-        $prescription = Prescription::all();
+        $prescriptions = Prescription::all();
         return view('prescription.index', compact('prescriptions'));
     }
     
