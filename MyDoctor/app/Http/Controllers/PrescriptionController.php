@@ -16,10 +16,16 @@ class PrescriptionController extends Controller
      */
     public function index()
     {
-        $prescriptions = Prescription::all();
-
-        return view('prescription.index', compact('prescriptions'));
+        $prescription = Prescription::all();
+        return view('prescription.index');
     }
+    public function indexAdmin()
+    {
+        //$pres = Prescription::all();
+
+        return view('admin.prescription.index');
+    }
+
 
     /**
      * Show the form for creating a new resource.
@@ -29,6 +35,10 @@ class PrescriptionController extends Controller
     public function create()
     {
         return view('prescription.create');
+    }
+    public function createAdmin()
+    {
+        return view('admin.prescription.create');
     }
 
     /**

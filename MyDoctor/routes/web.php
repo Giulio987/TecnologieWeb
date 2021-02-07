@@ -30,6 +30,10 @@ Route::get('/doctor', 'DoctorController@doctorDashboard')->name('doctor_dashboar
 
 //AdminController
 Route::get('/admin', 'AdminController@adminDashboard')->name('admin_dashboard');
+Route::get('/admin/doctor', 'DoctorController@indexAdmin');
+Route::get('/admin/user', 'HomeController@indexAdmin');
+Route::get('/admin/prescription', 'PrescriptionController@indexAdmin');
+Route::get('/admin/visit', 'VisitController@indexAdmin');
 
 //HomeController
 Route::get('/home', 'HomeController@index')->name('user_dashboard');
@@ -46,3 +50,5 @@ Route::post('/register/doctor', 'Auth\RegisterController@createDoctor')->name('d
 
 //PrescriptionController
 Route::resource('/doctor/prescription', 'PrescriptionController');
+
+

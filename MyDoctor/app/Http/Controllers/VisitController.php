@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Visit;
+use App\Models\Visit;
 use Illuminate\Http\Request;
 
 class VisitController extends Controller
@@ -14,9 +14,14 @@ class VisitController extends Controller
      */
     public function index()
     {
-        $visits = Visit::all();
-
         return view('visit.index');
+    }
+
+    public function indexAdmin()
+    {
+        //$pres = Prescription::all();
+
+        return view('admin.visit.index');
     }
 
     /**
