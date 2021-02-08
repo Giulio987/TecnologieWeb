@@ -15,7 +15,7 @@
     <div class="col-md-4 my-3">
       <div class="card h-100 border-card">
         <img src="images/farmaci-senza-ricetta1.jpg" class="card-img-top dim-img-card" alt="...">
-        <a type="button" class="btn btn-outline-primary border-button py-4" href="{{ URL::action('PrescriptionController@index') }}" role="button">
+        <a type="button" class="btn btn-outline-primary border-button py-4" href="{{ URL::action('DoctorController@indexPrescription') }}" role="button">
           <p class="card-text font-weight-bold text-uppercase">Prescivi una ricetta</p>
         </a>
       </div>

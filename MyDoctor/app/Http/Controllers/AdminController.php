@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Doctor;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -22,8 +22,14 @@ class AdminController extends Controller
      */
     public function indexDoctor()
     {
-        return view('admin.doctor.index');
+        $doctors = Doctor::all();
+        return view('admin.doctor.index', compact('doctors'));
     }
+    public function createDoctor()
+    {
+        return view('admin.doctor.create');
+    }
+    
     public function indexPres()
     {
         //$pres = Prescription::all();

@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Prescription;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Auth;
+
+use App\Models\Prescription;
+use App\Models\User;
 
 use Log;
 
@@ -16,8 +19,7 @@ class PrescriptionController extends Controller
      */
     public function index()
     {
-        $prescriptions = Prescription::all();
-        return view('prescription.index', compact('prescriptions'));
+        //
     }
     
     /**
@@ -27,11 +29,7 @@ class PrescriptionController extends Controller
      */
     public function create()
     {
-        return view('prescription.create');
-    }
-    public function createAdmin()
-    {
-        return view('admin.prescription.create');
+        //
     }
 
     /**
@@ -42,12 +40,7 @@ class PrescriptionController extends Controller
      */
     public function store(Request $request)
     {
-        $input = $request -> all();
-        Prescription::create($input);
-
-        Log::info($input);  /*da togliere dopo che funziona*/
-
-        return redirect('/doctor/prescription');
+        //
     }
 
     /**

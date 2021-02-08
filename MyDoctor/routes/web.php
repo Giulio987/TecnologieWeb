@@ -27,13 +27,30 @@ Route::get('/register/doctor', 'Auth\RegisterController@showDoctorRegisterForm')
 
 //DoctorController
 Route::get('/doctor', 'DoctorController@doctorDashboard')->name('doctor_dashboard');
+Route::get('/doctor/prescription', 'DoctorController@indexPrescription');
+Route::get('/doctor/prescription/create', 'DoctorController@createPrescription');
+Route::post('/doctor/prescription/store', 'DoctorController@storePrescription');
+
+
+
+
 
 //AdminController
 Route::get('/admin', 'AdminController@adminDashboard')->name('admin_dashboard');
+//admin-dottore
 Route::get('/admin/doctor', 'AdminController@indexDoctor');
+Route::get('/admin/doctor/create', 'AdminController@createDoctor');
+Route::post('','DoctorController@storeAdmin');//per avere le rotte non usando resource
+
+
 Route::get('/admin/user', 'AdminController@indexUser');
 Route::get('/admin/prescription', 'AdminController@indexPres');
 Route::get('/admin/visit', 'AdminController@indexVisit');
+
+
+
+
+
 
 //HomeController
 Route::get('/home', 'HomeController@index')->name('user_dashboard');
@@ -47,8 +64,5 @@ Route::post('/login/doctor', 'Auth\LoginController@doctorLogin')->name('doctor_l
 //RegisterController
 Route::post('/register/admin', 'Auth\RegisterController@createAdmin')->name('admin_register');
 Route::post('/register/doctor', 'Auth\RegisterController@createDoctor')->name('doctor_register');
-
-//PrescriptionController
-Route::resource('/doctor/prescription', 'PrescriptionController');
 
 

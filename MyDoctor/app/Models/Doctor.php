@@ -22,6 +22,6 @@ class Doctor extends Authenticate
 
     public function prescriptions()
     {
-        return $this->hasMany('App\Models\Prescription');  //un dottore ha molte ricette (N:1)
+        return $this->hasMany('App\Models\Prescription', 'id_doctor');  //un dottore ha molte ricette (N:1)
     }
 }
