@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Visit;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
+
 
 class VisitController extends Controller
 {
@@ -14,7 +16,11 @@ class VisitController extends Controller
      */
     public function index()
     {
+<<<<<<< HEAD
+        return view('user.visit.create');
+=======
         return view('visit.index');
+>>>>>>> f5e71dc1fd59f7dfe9ff9d74744c29a79201feaa
     }
 
     /**
@@ -24,7 +30,7 @@ class VisitController extends Controller
      */
     public function create()
     {
-        //
+        return view('user.visit.create');
     }
 
     /**
@@ -33,9 +39,30 @@ class VisitController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+
+
+    protected function validatorVisit(array $data)
+    {
+        return Validator::make($data, [
+            'id_user'        => ['required', 'integer'],
+            'id_doctor'      => ['required', 'integer'],
+            'date'           => ['required', 'date'],
+            'time'           => ['required'],
+        ]);
+    }
+
+
     public function store(Request $request)
     {
-        //
+        $this->validatorVisit($request->all())->validate();
+        Visit::create([
+            'id_user'        => $request->id_user,
+            'id_doctor'      => $request->id_doctor,
+            'date'           => $request->date,
+            'time'           => $request->time,
+
+        ]);
+        return redirect()->intended('/home');
     }
 
     /**
