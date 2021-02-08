@@ -6,8 +6,6 @@ use App\Models\Prescription;
 use Illuminate\Http\Request;
 
 use Log;
-use App\Models\Doctor;
-use App\Models\User;
 
 class PrescriptionController extends Controller
 {
@@ -18,11 +16,10 @@ class PrescriptionController extends Controller
      */
     public function index()
     {
-        $pres = Prescription::all();
-
-        return view('prescription.index');
+        $prescriptions = Prescription::all();
+        return view('prescription.index', compact('prescriptions'));
     }
-
+    
     /**
      * Show the form for creating a new resource.
      *
@@ -31,6 +28,10 @@ class PrescriptionController extends Controller
     public function create()
     {
         return view('prescription.create');
+    }
+    public function createAdmin()
+    {
+        return view('admin.prescription.create');
     }
 
     /**
@@ -44,9 +45,9 @@ class PrescriptionController extends Controller
         $input = $request -> all();
         Prescription::create($input);
 
-        Log::info($input);
+        Log::info($input);  /*da togliere dopo che funziona*/
 
-        return redirect('/prescription');
+        return redirect('/doctor/prescription');
     }
 
     /**

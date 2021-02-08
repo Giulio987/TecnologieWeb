@@ -25,11 +25,10 @@ class HomeController extends Controller
     {
         return view('user.dashboard');
     }
-
+    
     public function create_visit()
     {
         return view('user.visit.create');
     }
 
-    
 }

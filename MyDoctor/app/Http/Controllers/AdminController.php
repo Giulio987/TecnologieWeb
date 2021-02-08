@@ -15,6 +15,29 @@ class AdminController extends Controller
     {
         $this->middleware('auth:admin');
     }
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function indexDoctor()
+    {
+        return view('admin.doctor.index');
+    }
+    public function indexPres()
+    {
+        //$pres = Prescription::all();
+        return view('admin.prescription.index');
+    }
+    public function indexUser()
+    {
+        return view('admin.user.index');
+    }
+
+    public function indexVisit()
+    {
+        return view('admin.visit.index');
+    }
 
     /*
      * After logging as client the dashboard for client

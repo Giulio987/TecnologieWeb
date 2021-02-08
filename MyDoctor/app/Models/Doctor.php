@@ -19,4 +19,9 @@ class Doctor extends Authenticate
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function prescriptions()
+    {
+        return $this->hasMany('App\Models\Prescription');  //un dottore ha molte ricette (N:1)
+    }
 }

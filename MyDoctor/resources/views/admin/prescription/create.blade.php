@@ -22,21 +22,20 @@
 
         <div class="form-group">
             <label for="status">Stato</label>
-            <input type="text" class="form-control" name="status" value="Convalidata" readonly>
-            <input type="hidden" name="status" value="Convalidata" />
+            <input type="text" class="form-control" name="status" value="Convalidata" disabled>
         </div>
 
         <fieldset class="form-group row">
             <legend class="col-form-label col-sm-2 float-sm-left pt-0">Tipologia Ricetta:</legend>
             <div class="col-sm-10">
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="type" id="type" value="Farmaco" checked>
+                    <input class="form-check-input" type="radio" name="type" id="type" value="farmaco" checked>
                     <label class="form-check-label" for="type">
                         Farmaco
                     </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="type" id="type" value="Visita Specialistica">
+                    <input class="form-check-input" type="radio" name="type" id="type" value="visita specialistica">
                     <label class="form-check-label" for="type">
                         Visita specialistica
                     </label>
@@ -45,12 +44,9 @@
         </fieldset>
 
         <input type="hidden" name="id_doctor" value="{{ Auth::guard('doctor')->user()->id }}" />
-        <input type="hidden" name="date" value="<?php echo date("Y-m-d"); ?>" />
-        <!--
-        <input type="hidden"name="date" value=<script language="Javascript">$(function () { $('.input-daterange').datepicker({ startDate : new Date(), todayHighlight : true }); });</script> />
-        -->
+
         <button type="submit" class="btn btn-primary">Salva</button>
-        <a href="{{ URL::action('PrescriptionController@index') }}" class="btn btn-secondary">Indietro</a>
+        <button type="button" class="btn btn-secondary">Indietro</button>
 
     </form>
 </div>

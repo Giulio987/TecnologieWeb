@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Doctor;
+use Log;
 
 class DoctorController extends Controller
 {
@@ -19,9 +21,10 @@ class DoctorController extends Controller
     /*
      * After logging as doctor the dashboard for doctor
      * @return \Illuminate\Contracts\Support\Referable
-     * */
+     */
     public function doctorDashboard()
     {
         return view('doctor.dashboard');
     }
+    
 }
