@@ -17,9 +17,11 @@ class CreateVisitsTable extends Migration
             $table->id('id');
             $table->bigInteger('id_user')->unsigned();
             $table->bigInteger('id_doctor')->unsigned();
-            $table->date('visit_data');
+            $table->date('date');
+            $table->timeTz('time');
             $table->timestamps();
 
+            $table->unique(['date','time']);
             $table->foreign('id_user')->references('id')->on('users')->onDelete('cascade');
             $table->foreign('id_doctor')->references('id')->on('doctors')->onDelete('cascade');
         });
