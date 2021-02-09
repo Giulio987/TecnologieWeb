@@ -89,13 +89,13 @@ class PrescriptionController extends Controller
     }
 
     // ********** PRESCRIPTION PER USO DOTTORI **********
-    public function indexPrescription()
+    public function indexDoctor()
     {
         $prescriptions = Prescription::paginate(3);
         return view('doctor.prescription.index', compact('prescriptions'));
     }
 
-    public function createPrescription()
+    public function createDoctor()
     {
         //Prende i pazienti(user) che hanno l'id_doctor del doctor autenticato
 
@@ -104,7 +104,7 @@ class PrescriptionController extends Controller
         return view('doctor.prescription.create', compact('users'));
     }
 
-    public function storePrescription(Request $request)
+    public function storeDoctor(Request $request)
     {
         $input = $request -> all();
 
@@ -115,5 +115,36 @@ class PrescriptionController extends Controller
         return redirect('/doctor/prescription');
     }
 
-    // ********** FINE PRESCRIPTION USO DOTTORI **********
+    // ********** FINE PRESCRIPTION USO DOCTOR **********
+
+    // ********** PRESCRIPTION PER USO ADMIN **********
+    public function indexAdmin()
+    {
+        $prescriptions = Prescription::paginate(3);
+        return view('admin.prescription.index', compact('prescriptions'));
+    }
+
+    public function createAdmin()
+    {
+        //Prende i pazienti(user) che hanno l'id_doctor del doctor autenticato
+
+        $prescriptions = Prescription::all();
+
+        return view('admin.prescription.create', compact('prescriptions'));
+    }
+
+    public function storeAdmin(Request $request)
+    {
+        $input = $request -> all();
+
+        Prescription::create($input);
+
+        Log::info($input);  /*da togliere dopo che funziona*/
+
+        return redirect('/admin/prescription');
+    }
+
+    // ********** FINE PRESCRIPTION USO ADMIN **********
 }
+
+

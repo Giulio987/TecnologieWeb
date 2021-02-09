@@ -15,4 +15,10 @@ class Admin extends Authenticate
     protected $hidden = [
         'password', 'remember_token',
     ];
+    public function doctors(){
+        return $this->hasMany('App\Models\Doctor', 'id_doctor');  
+    }
+    public function users(){
+        return $this->hasMany('App\Models\User', 'id_user');  
+    }
 }

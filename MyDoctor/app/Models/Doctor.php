@@ -24,4 +24,13 @@ class Doctor extends Authenticate
     {
         return $this->hasMany('App\Models\Prescription', 'id_doctor');  //un dottore ha molte ricette (N:1)
     }
+
+    public function admins()
+    {
+        return $this->belongsTo('App\Models\Admin', 'id_admin');
+    }
+    /*public function buildings()
+    {
+        return $this->belongsTo('App\Models\Buildings', 'id_building');  //una prescrizione appartiene a un paziente
+    }*/
 }

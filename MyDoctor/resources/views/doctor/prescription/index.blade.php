@@ -21,7 +21,7 @@
             <p size="7" color="#000" style="text-align:center; margin-top:10px;">Visualizza e Prescrivi le ricette che hai prescritto ai tuoi pazienti</p>
         </h4>
         <p class="text-center">
-        <a href="{{ URL::action('PrescriptionController@createPrescription') }}" class="btn btn-outline-primary mb-2">Prescivi Nuova Ricetta</a>
+        <a href="{{ URL::action('PrescriptionController@createDoctor') }}" class="btn btn-outline-primary mb-2">Prescivi Nuova Ricetta</a>
         </p>
 
         <h2>Filtro Tabella</h2>

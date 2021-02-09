@@ -29,13 +29,7 @@ class DoctorController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function storeAdmin(Request $request)
-    {
-        $input = $request -> all();
-        Doctor::create($input);
-
-        return redirect('/admin/doctor');
-    }
+    
     /*
      * After logging as doctor the dashboard for doctor
      * @return \Illuminate\Contracts\Support\Referable

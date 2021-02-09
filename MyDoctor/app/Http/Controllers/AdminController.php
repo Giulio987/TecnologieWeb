@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\Doctor;
 use Illuminate\Http\Request;
-
+use Log;
 class AdminController extends Controller
 {
     /**
@@ -27,23 +27,26 @@ class AdminController extends Controller
     }
     public function createDoctor()
     {
-        return view('admin.doctor.create');
+        $doctors = Doctor::all();
+
+        return view('admin.doctor.create', compact('doctors'));
     }
-    
-    public function indexPres()
+    public function storeDoctor(Request $request)
     {
-        //$pres = Prescription::all();
-        return view('admin.prescription.index');
+        $input = $request -> all();
+        Doctor::create($input);
+
+        Log::info($input);
+
+        return redirect('/admin/doctor');
     }
+
+
     public function indexUser()
     {
         return view('admin.user.index');
     }
 
-    public function indexVisit()
-    {
-        return view('admin.visit.index');
-    }
 
     /*
      * After logging as client the dashboard for client
