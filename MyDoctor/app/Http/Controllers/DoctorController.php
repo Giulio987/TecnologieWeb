@@ -29,35 +29,6 @@ class DoctorController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    // PRESCRIPTION PER USO DOTTORI
-    public function indexPrescription()
-    {
-        $prescriptions = Prescription::all();
-        return view('doctor.prescription.index', compact('prescriptions'));
-    }
-
-    public function createPrescription()
-    {
-        //Prende i pazienti(user) che hanno l'id_doctor del doctor autenticato
-
-        $users = User::where('id_doctor', '=', auth()->guard('doctor')->user()->id)->get();
-
-        return view('doctor.prescription.create', compact('users'));
-    }
-
-    public function storePrescription(Request $request)
-    {
-        $input = $request -> all();
-
-        Prescription::create($input);
-
-        Log::info($input);  /*da togliere dopo che funziona*/
-
-        return redirect('/doctor/prescription');
-    }
-
-    // FINE PRESCRIPTION USO DOTTORI
-
     public function storeAdmin(Request $request)
     {
         $input = $request -> all();

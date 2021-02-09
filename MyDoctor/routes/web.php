@@ -27,9 +27,9 @@ Route::get('/register/doctor', 'Auth\RegisterController@showDoctorRegisterForm')
 
 //DoctorController
 Route::get('/doctor', 'DoctorController@doctorDashboard')->name('doctor_dashboard');
-Route::get('/doctor/prescription', 'DoctorController@indexPrescription');
-Route::get('/doctor/prescription/create', 'DoctorController@createPrescription');
-Route::post('/doctor/prescription/store', 'DoctorController@storePrescription');
+Route::get('/doctor/prescription', 'PrescriptionController@indexPrescription');
+Route::get('/doctor/prescription/create', 'PrescriptionController@createPrescription');
+Route::post('/doctor/prescription/store', 'PrescriptionController@storePrescription');
 
 
 
