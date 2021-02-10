@@ -54,7 +54,9 @@ Route::get('/admin/visit', 'AdminController@indexVisit');
 
 //HomeController
 Route::get('/home', 'HomeController@index')->name('user_dashboard');
-Route::resource('/home/visit', 'VisitController')->except('update', 'show', 'edit');
+Route::resource('/home/visit', 'VisitController');
+Route::resource('/home/prescription', 'PrescriptionController');
+
 
 //********************************POST********************************
 //LoginController

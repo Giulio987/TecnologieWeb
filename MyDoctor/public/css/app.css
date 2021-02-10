@@ -11529,6 +11529,18 @@ Dottori
   border-radius: 20px;
 }
 
+.quadrato-ricetta {
+    width: auto;
+    height: auto;
+    border-style: solid;
+    border-width: 5px;
+    border-color: #3490dc;
+    box-shadow: 10px 10px 5px #dedede;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    border-radius: 20px;
+  }
+
 .btn-orario {
   
   width: 100px;
@@ -11551,4 +11563,14 @@ Dottori
   border-radius: 100%;
 }
 
+.label-ricetta {
+    text-align:center;
+    border-color: #3490dc;
+    border-width: 0px 0px 2px 0px;
+    background-color: #f8fafc;
+    outline: none;
+  box-shadow: none;
+    width: 500px;
+    height: auto;
 
+}
