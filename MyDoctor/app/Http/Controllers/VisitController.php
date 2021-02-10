@@ -16,11 +16,7 @@ class VisitController extends Controller
      */
     public function index()
     {
-<<<<<<< HEAD
         return view('user.visit.create');
-=======
-        return view('visit.index');
->>>>>>> eefdbad5064fd2ea7f368a278c859c432c933b3c
     }
 
     /**
