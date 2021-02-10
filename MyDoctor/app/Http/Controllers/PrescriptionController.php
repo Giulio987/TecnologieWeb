@@ -7,6 +7,7 @@ use App\Http\Controllers\Auth;
 
 use App\Models\Prescription;
 use App\Models\User;
+use App\Models\Doctor;
 
 use Log;
 
@@ -115,6 +116,11 @@ class PrescriptionController extends Controller
         return redirect('/doctor/prescription');
     }
 
+    public function editDoctor(Prescription $prescription)
+    {
+        return view('doctor.prescription.create', compact('prescription'));
+    }
+
     // ********** FINE PRESCRIPTION USO DOCTOR **********
 
     // ********** PRESCRIPTION PER USO ADMIN **********
@@ -127,10 +133,10 @@ class PrescriptionController extends Controller
     public function createAdmin()
     {
         //Prende i pazienti(user) che hanno l'id_doctor del doctor autenticato
+        $doctors = Doctor::all();
+        $users = User::all();
 
-        $prescriptions = Prescription::all();
-
-        return view('admin.prescription.create', compact('prescriptions'));
+        return view('admin.prescription.create', compact('users', 'doctors'));
     }
 
     public function storeAdmin(Request $request)

@@ -41,7 +41,7 @@
                 <th scope="col">Status</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody id="myTable">
                 @foreach($prescriptions as $p)
                     <tr>
                     <th scope="row">{{ date('d/m/Y', strtotime($p->date)) }}</th>
@@ -54,8 +54,8 @@
                     </tr>
                 @endforeach
             </tbody>
-            {{ $prescriptions->links() }}
         </table>
+        {{ $prescriptions->links() }}
 
     </div>
 @endsection

@@ -30,6 +30,7 @@ Route::get('/doctor', 'DoctorController@doctorDashboard')->name('doctor_dashboar
 Route::get('/doctor/prescription', 'PrescriptionController@indexDoctor');
 Route::get('/doctor/prescription/create', 'PrescriptionController@createDoctor');
 Route::post('/doctor/prescription/store', 'PrescriptionController@storeDoctor');
+Route::get('/doctor/prescription/edit', 'PrescriptionController@editDoctor');
 
 
 

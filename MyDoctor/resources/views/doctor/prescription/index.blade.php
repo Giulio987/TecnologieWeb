@@ -2,7 +2,9 @@
 
 @section('content')
     <div class="container">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+ 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script>
             $(document).ready(function(){
             $("#myInput").on("keyup", function() {
@@ -41,9 +43,10 @@
                 <th scope="col">Tipologia</th>
                 <th scope="col">Descrizione</th>
                 <th scope="col">Status</th>
+                <th scope="col">Azioni</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody id="myTable">
                 @foreach($prescriptions as $p)
                     <tr>
                     <th scope="row">{{ date('d/m/Y', strtotime($p->date)) }}</th>
@@ -55,10 +58,12 @@
                     <td>{{ $p->type }}</td>
                     <td>{{ $p->description }}</td>
                     <td>{{ $p->status }}</td>
+                    <td><a href="{{ URL::action('PrescriptionController@editDoctor', $p) }}" class="btn btn-primary btn-sm"><i class="bi bi-pencil"></i>  Modifica</a></td>
                     </tr>
                 @endforeach
             </tbody>
         </table>
+        {{ $prescriptions->links() }}
 
     </div>
 @endsection
