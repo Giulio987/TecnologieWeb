@@ -19,9 +19,12 @@ class CreateBuildingsTable extends Migration
             $table->string('street_number', '8');
             $table->string('postal_code', '5');
             $table->string('city', '30');
+            $table->bigInteger('id_admin')->unsigned()->default(1);
             $table->timestamps();
 
             $table->unique(['street_address','street_number','postal_code','city']);
+
+            $table->foreign('id_admin')->references('id')->on('admins')->onDelete('cascade');
 
             
         });

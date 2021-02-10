@@ -16,6 +16,7 @@ class BuildingsTableSeeder extends Seeder
             'street_number' => '12',
             'postal_code'   => '40121',
             'city'          => 'Bologna',
+            'id_admin'      => '1',
             'updated_at'    => date('Y-m-d h:s:i'),
             'created_at'    => date('Y-m-d h:s:i')
         ], [
@@ -23,6 +24,7 @@ class BuildingsTableSeeder extends Seeder
             'street_number' => '246',
             'postal_code'   => '40121',
             'city'          => 'Bologna',
+            'id_admin'      => '1',
             'updated_at'    => date('Y-m-d h:s:i'),
             'created_at'    => date('Y-m-d h:s:i')
         ], [
@@ -30,6 +32,7 @@ class BuildingsTableSeeder extends Seeder
             'street_number' => '98',
             'postal_code'   => '44100',
             'city'          => 'Ferrara',
+            'id_admin'      => '1',
             'updated_at'    => date('Y-m-d h:s:i'),
             'created_at'    => date('Y-m-d h:s:i')
         ]]);

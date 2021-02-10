@@ -27,6 +27,7 @@ class CreateUsersTable extends Migration
             $table->string('postal_code', '5');
             $table->string('city', '30');
             $table->bigInteger('id_doctor')->unsigned();
+            $table->bigInteger('id_admin')->unsigned();
 
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
@@ -34,6 +35,7 @@ class CreateUsersTable extends Migration
             $table->timestamps();
             
             $table->foreign('id_doctor')->references('id')->on('doctors')->onDelete('cascade');
+            $table->foreign('id_admin')->references('id')->on('admins')->onDelete('cascade');
         });
     }
 

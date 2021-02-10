@@ -41,5 +41,9 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\Models\Prescription', 'id_user');  //un paziente ha molte ricette (N:1)
     }
+    public function admins()
+    {
+        return $this->belongsTo('App\Models\Admin', 'id_admin');  //una prescrizione appartiene a un paziente
+    }
 
 }

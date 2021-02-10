@@ -23,11 +23,13 @@ class CreateDoctorsTable extends Migration
             $table->date('dob');
             $table->string('phone_number','15')->unique();
             $table->bigInteger('id_building')->unsigned();
+            $table->bigInteger('id_admin')->unsigned()->default(1);
             $table->string('password'); 
             $table->rememberToken();
             $table->timestamps();
 
             $table->foreign('id_building')->references('id')->on('buildings')->onDelete('cascade');
+            $table->foreign('id_admin')->references('id')->on('admins')->onDelete('cascade');
         });
     }
 

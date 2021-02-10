@@ -20,6 +20,7 @@ class DoctorsTableSeeder extends Seeder
             'dob'           => '1980-12-21',
             'phone_number'  => '051879211',
             'id_building'   => '1',
+            'id_admin'      => '1',
             'password'      => bcrypt('doctor'),
             'updated_at'    => date('Y-m-d h:s:i'),
             'created_at'    => date('Y-m-d h:s:i')
@@ -32,6 +33,7 @@ class DoctorsTableSeeder extends Seeder
             'dob'           => '1963-08-27',
             'phone_number'  => '053277904',
             'id_building'   => '3',
+            'id_admin'      => '1',
             'password'      => bcrypt('doctor'),
             'updated_at'    => date('Y-m-d h:s:i'),
             'created_at'    => date('Y-m-d h:s:i')
@@ -44,6 +46,7 @@ class DoctorsTableSeeder extends Seeder
             'dob'           => '1933-07-21',
             'phone_number'  => '051634292',
             'id_building'   => '2',
+            'id_admin'      => '1',
             'password'      => bcrypt('doctor'),
             'updated_at'    => date('Y-m-d h:s:i'),
             'created_at'    => date('Y-m-d h:s:i')
@@ -56,6 +59,7 @@ class DoctorsTableSeeder extends Seeder
             'dob'           => '1985-03-25',
             'phone_number'  => '051955064',
             'id_building'   => '2',
+            'id_admin'      => '1',
             'password'      => bcrypt('doctor'),
             'updated_at'    => date('Y-m-d h:s:i'),
             'created_at'    => date('Y-m-d h:s:i')
@@ -69,6 +73,7 @@ class DoctorsTableSeeder extends Seeder
             'dob'           => '1964-07-19',
             'phone_number'  => '0532380540',
             'id_building'   => '3',
+            'id_admin'      => '1',
             'password'      => bcrypt('doctor'),
             'updated_at'    => date('Y-m-d h:s:i'),
             'created_at'    => date('Y-m-d h:s:i')

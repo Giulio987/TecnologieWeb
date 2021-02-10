@@ -6,7 +6,7 @@
 
         <h1>Prescivi una nuova Ricette per Farmaco</h1>
 
-        <form action="{{ URL::action('DoctorController@storePrescription') }}" method="POST" class="needs-validation"
+        <form action="{{ URL::action('PrescriptionController@storeDoctor') }}" method="POST" class="needs-validation"
             novalidate>
             {{ csrf_field() }}
 
@@ -60,7 +60,7 @@
             <input type="hidden"name="date" value=<script language="Javascript">$(function () { $('.input-daterange').datepicker({ startDate : new Date(), todayHighlight : true }); });</script> />
             -->
             <button type="submit" class="btn btn-primary">Salva</button>
-            <a href="{{ URL::action('DoctorController@indexPrescription') }}" class="btn btn-secondary">Indietro</a>
+            <a href="{{ URL::action('PrescriptionController@indexDoctor') }}" class="btn btn-secondary">Indietro</a>
 
         </form>
     </div>
