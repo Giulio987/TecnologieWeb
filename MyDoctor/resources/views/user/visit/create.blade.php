@@ -2,18 +2,11 @@
 
 @section('content')
 
-<script type="text/javascript">
-    $(window).on('load', function NoShow() {
-        document.getElementById('content1').style.display = 'none';
-        document.getElementById('content2').style.display = 'none';
-        document.getElementById('content3').style.display = 'none';
-        document.getElementById('content4').style.display = 'none';
-        document.getElementById('content5').style.display = 'none';
-        document.getElementById('content6').style.display = 'none';
-    });
-
+<script type="application/javascript">
     function Show1() {
-        document.getElementById('content1').style.display = 'block';
+        $("#content1").toggle("slow", function() {
+            // Animation complete.
+        });
         document.getElementById('content2').style.display = 'none';
         document.getElementById('content3').style.display = 'none';
         document.getElementById('content4').style.display = 'none';
@@ -23,7 +16,9 @@
 
     function Show2() {
         document.getElementById('content1').style.display = 'none';
-        document.getElementById('content2').style.display = 'block';
+        $("#content2").toggle("slow", function() {
+            // Animation complete.
+        });
         document.getElementById('content3').style.display = 'none';
         document.getElementById('content4').style.display = 'none';
         document.getElementById('content5').style.display = 'none';
@@ -33,7 +28,9 @@
     function Show3() {
         document.getElementById('content1').style.display = 'none';
         document.getElementById('content2').style.display = 'none';
-        document.getElementById('content3').style.display = 'block';
+        $("#content3").toggle("slow", function() {
+            // Animation complete.
+        });
         document.getElementById('content4').style.display = 'none';
         document.getElementById('content5').style.display = 'none';
         document.getElementById('content6').style.display = 'none';
@@ -43,7 +40,9 @@
         document.getElementById('content1').style.display = 'none';
         document.getElementById('content2').style.display = 'none';
         document.getElementById('content3').style.display = 'none';
-        document.getElementById('content4').style.display = 'block';
+        $("#content4").toggle("slow", function() {
+            // Animation complete.
+        });
         document.getElementById('content5').style.display = 'none';
         document.getElementById('content6').style.display = 'none';
     }
@@ -53,7 +52,9 @@
         document.getElementById('content2').style.display = 'none';
         document.getElementById('content3').style.display = 'none';
         document.getElementById('content4').style.display = 'none';
-        document.getElementById('content5').style.display = 'block';
+        $("#content5").toggle("slow", function() {
+            // Animation complete.
+        });
         document.getElementById('content6').style.display = 'none';
     }
 
@@ -63,7 +64,9 @@
         document.getElementById('content3').style.display = 'none';
         document.getElementById('content4').style.display = 'none';
         document.getElementById('content5').style.display = 'none';
-        document.getElementById('content6').style.display = 'block';
+        $("#content6").toggle("slow", function() {
+            // Animation complete.
+        });
     }
 </script>
 
@@ -91,7 +94,7 @@ function giornoData($d, $m, $a)
         <h4>
             <p color="#000" class="mt-2">Fissa un appuntamento per farti ricevere dal medico quando ti è più comodo.</p>
         </h4>
-        <form action="{{ URL::action('VisitController@store') }}" method="POST" name="modulo">
+        <form action="{{ URL::action('VisitController@store') }}" method="POST">
             {{ csrf_field() }}
             <div class="form-group my-3">
                 <h5>
@@ -115,7 +118,7 @@ function giornoData($d, $m, $a)
                         $date1 = date('Y/m/d');
                         $gContent1 = giornoData($d, $m, $y);
                         ?>
-                        <label class="btn btn-outline-primary active col-md-2 quadrato mx-4 mb-2">
+                        <label class="btn btn-outline-primary col-md-2 quadrato mx-4 mb-2">
                             <input type="radio" name="date" id="date1" value="{{ $date1 }}" onclick="Show1()">
                             <h5 class="my-3">{{ $gContent1 }}</h5>
                             <h3 class="font-weight-bold my-3">{{ $d }}</h3>
@@ -129,7 +132,7 @@ function giornoData($d, $m, $a)
                         $y = date("y", $CalculateDate);
                         $gContent2 = giornoData($d, $m, $y);
                         ?>
-                        <label class="btn btn-outline-primary col-md-2 quadrato mx-4 mb-2">
+                        <label class="btn btn-outline-primary col-md-2 quadrato mx-4 mb-2 ">
                             <input type="radio" name="date" id="date2" value="{{ $date2 }}" onclick="Show2()">
                             <h5 class="my-3">{{ $gContent2 }}</h5>
                             <h3 class="font-weight-bold my-3">{{ $d }}</h3>
@@ -193,7 +196,7 @@ function giornoData($d, $m, $a)
                     </div>
                 </div>
             </div>
-            <div class="row my-5" id="content1">
+            <div class="row my-5" id="content1" style="display:none">
                 @if($gContent1 != 'Domenica')
                 <div class=" btn-group-toggle w-100 h-100" data-toggle="buttons">
                     @if (DB::table('visits')->where('date', $date1)->where('time',$time[0])->doesntExist())
@@ -331,7 +334,7 @@ function giornoData($d, $m, $a)
                 </div>
                 @endif
             </div>
-            <div class="row my-5" id="content2">
+            <div class="row my-5" id="content2" style="display:none">
                 @if($gContent2 != 'Domenica')
                 <div class=" btn-group-toggle w-100 h-100" data-toggle="buttons" style="text-align: center;">
                     @if (DB::table('visits')->where('date', $date2)->where('time',$time[0])->doesntExist())
@@ -434,7 +437,7 @@ function giornoData($d, $m, $a)
                 @endif
             </div>
 
-            <div class="row my-5" id="content3">
+            <div class="row my-5" id="content3" style="display:none">
                 @if($gContent3 != 'Domenica')
                 <div class=" btn-group-toggle w-100 h-100" data-toggle="buttons" style="text-align: center;">
                     @if (DB::table('visits')->where('date', $date3)->where('time',$time[0])->doesntExist())
@@ -536,7 +539,7 @@ function giornoData($d, $m, $a)
                 </div>
                 @endif
             </div>
-            <div class="row my-5" id="content4">
+            <div class="row my-5" id="content4" style="display:none">
                 @if($gContent4 != 'Domenica')
                 <div class=" btn-group-toggle w-100 h-100" data-toggle="buttons" style="text-align: center;">
                     @if (DB::table('visits')->where('date', $date4)->where('time',$time[0])->doesntExist())
@@ -638,7 +641,7 @@ function giornoData($d, $m, $a)
                 </div>
                 @endif
             </div>
-            <div class="row my-5" id="content5">
+            <div class="row my-5" id="content5" style="display:none">
                 @if($gContent5 != 'Domenica')
                 <div class=" btn-group-toggle w-100 h-100" data-toggle="buttons" style="text-align: center;">
                     @if (DB::table('visits')->where('date', $date5)->where('time',$time[0])->doesntExist())
@@ -740,7 +743,7 @@ function giornoData($d, $m, $a)
                 </div>
                 @endif
             </div>
-            <div class="row my-5" id="content6">
+            <div class="row my-5" id="content6" style="display:none">
                 @if($gContent6 != 'Domenica')
                 <div class=" btn-group-toggle w-100 h-100" data-toggle="buttons" style="text-align: center;">
                     @if (DB::table('visits')->where('date', $date6)->where('time',$time[0])->doesntExist())

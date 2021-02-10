@@ -4,12 +4,13 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Auth;
+use Illuminate\Support\Facades\Validator;
+
 
 use App\Models\Prescription;
 use App\Models\User;
 use App\Models\Doctor;
 
-use Log;
 
 class PrescriptionController extends Controller
 {
@@ -20,9 +21,9 @@ class PrescriptionController extends Controller
      */
     public function index()
     {
-        //
+
     }
-    
+
     /**
      * Show the form for creating a new resource.
      *
@@ -30,18 +31,37 @@ class PrescriptionController extends Controller
      */
     public function create()
     {
-        //
+        return view('user.prescription.create');
+
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+
+    protected function validatorPrescription(array $data)
+    {
+        return Validator::make($data, [
+            'id_user'        => ['required', 'integer'],
+            'id_doctor'      => ['required', 'integer'],
+            'description'    => ['required'],
+            'status'         => ['required'],
+            'date'           => ['required', 'date'],
+            'type'           => ['required'],
+        ]);
+    }
+
+
     public function store(Request $request)
     {
-        //
+        $this->validatorPrescription($request->all())->validate();
+        Prescription::create([
+            'id_user'        => $request->id_user,
+            'id_doctor'      => $request->id_doctor,
+            'description'    => $request->description,
+            'status'         => $request->status,
+            'date'           => $request->date,
+            'type'           => $request->type,
+
+        ]);
+        return redirect()->intended('/home');
     }
 
     /**
